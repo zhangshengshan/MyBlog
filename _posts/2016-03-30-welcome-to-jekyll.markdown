@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
+title:  "Welcome to zhagnshengshan'blog!"
 color:  teal
 width:   6 
 height:  1
