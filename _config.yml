@@ -9,7 +9,7 @@
 title: 海阔天空 BLOG 
 email: zsszsszsszss@126.com 
 description: > # this means to ignore newlines until "baseurl:"
-  ShengShan Zhagn, zsszsszsszss@126.com
+  ShengShan Zhang, zsszsszsszss@126.com
 baseurl: "/MyBlog" # the subpath of your site, e.g. /blog
 url: "http://zhangshengshan.github.io/MyBlog" # the base hostname & protocol for your site
 twitter_username: NULL 
