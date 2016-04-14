@@ -1,18 +1,18 @@
--   id: javascript
-    descr: javascript    
+-   id: C/C++ 
+    descr: C/C++    
     xp: 6
--   id: css
-    descr: css
-    color: teal
+-   id: Go
+    descr: GoLang
+    color: GoLang
     xp: 7
--   id: c#
-    descr: c#    
+-   id: MySQL
+    descr: MySQL    
     xp: 3
--   id: angular
-    descr: angularjs    
+-   id: Python
+    descr: Python    
     xp: 8
--   id: java
-    descr: java    
+-   id: MachineLearning
+    descr: MachineLearning
     xp: 5
 -   id: sass
     descr: sass    
