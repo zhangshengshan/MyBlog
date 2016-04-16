@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Zhangshengshan&#39;s Blog</title>
+  <subtitle>Blogs on machine learning</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://zhangshengshan.github.io/"/>
+  <updated>2016-04-16T04:42:49.000Z</updated>
+  <id>http://zhangshengshan.github.io/</id>
+  
+  <author>
+    <name>Zhang ShengShan</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://zhangshengshan.github.io/2016/04/16/hello-world/"/>
+    <id>http://zhangshengshan.github.io/2016/04/16/hello-world/</id>
+    <published>2016-04-15T16:09:50.000Z</published>
+    <updated>2016-04-16T04:42:49.000Z</updated>
+    
+    <content type="html">&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;variable&quot;&gt;$echo&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&quot;Hello World&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</content>
+    
+    <summary type="html">
+    
+      &lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span clas
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
