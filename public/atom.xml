@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zhangshengshan.github.io/"/>
-  <updated>2016-07-13T05:12:24.000Z</updated>
+  <updated>2016-11-10T15:56:27.000Z</updated>
   <id>http://zhangshengshan.github.io/</id>
   
   <author>
@@ -16,18 +16,42 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>asdf</title>
-    <link href="http://zhangshengshan.github.io/2016/07/13/asdf/"/>
-    <id>http://zhangshengshan.github.io/2016/07/13/asdf/</id>
-    <published>2016-07-13T03:49:29.000Z</published>
-    <updated>2016-07-13T05:12:24.000Z</updated>
+    <title>MAC访问你DOCKER容器中的WEB页面</title>
+    <link href="http://zhangshengshan.github.io/2016/11/10/MAC%E8%AE%BF%E9%97%AE%E4%BD%A0DOCKER%E5%AE%B9%E5%99%A8%E4%B8%AD%E7%9A%84WEB%E9%A1%B5%E9%9D%A2/"/>
+    <id>http://zhangshengshan.github.io/2016/11/10/MAC访问你DOCKER容器中的WEB页面/</id>
+    <published>2016-11-10T15:22:16.000Z</published>
+    <updated>2016-11-10T15:56:27.000Z</updated>
     
-    <content type="html">&lt;p&gt;aaaaaaaaaa&lt;/p&gt;
+    <content type="html">&lt;p&gt;docker run -d -p hostport:dockerport –name your_container_name  your_image_name nginx -g “daemon off;”&lt;/p&gt;
+&lt;p&gt;the above instruction start a docker nginx application which bind is port dockerport to its host port hostport.&lt;br&gt;usually you can access the nginx service on your host environment by curl the hostport, however in MacOs, ths hostport here&lt;br&gt;is the virtual machine. so when you curl localhost:hostport, you will get no response.&lt;/p&gt;
+&lt;p&gt;the right way is access the virtual machine responding port. so the ip of virtual machine is needed.&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;docker-machine ip your_virtual_machine&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;curl the ip you get:hostport&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 </content>
     
     <summary type="html">
     
-      &lt;p&gt;aaaaaaaaaa&lt;/p&gt;
+      &lt;p&gt;docker run -d -p hostport:dockerport –name your_container_name  your_image_name nginx -g “daemon off;”&lt;/p&gt;
+&lt;p&gt;the above instruction start
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Install Caffe on CentOS</title>
+    <link href="http://zhangshengshan.github.io/2016/11/09/Install-Caffe-on-CentOS/"/>
+    <id>http://zhangshengshan.github.io/2016/11/09/Install-Caffe-on-CentOS/</id>
+    <published>2016-11-09T08:07:49.000Z</published>
+    <updated>2016-11-10T08:24:27.000Z</updated>
+    
+    <content type="html">&lt;p&gt;very diffcult&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;very diffcult&lt;/p&gt;
 
     
     </summary>
@@ -36,11 +60,11 @@
   </entry>
   
   <entry>
-    <title>最优化</title>
-    <link href="http://zhangshengshan.github.io/2016/05/23/%E6%9C%80%E4%BC%98%E5%8C%96/"/>
-    <id>http://zhangshengshan.github.io/2016/05/23/最优化/</id>
-    <published>2016-05-23T11:44:03.000Z</published>
-    <updated>2016-05-23T11:44:32.000Z</updated>
+    <title>Spark Window Operation </title>
+    <link href="http://zhangshengshan.github.io/2016/08/22/Spark-Window-Operation/"/>
+    <id>http://zhangshengshan.github.io/2016/08/22/Spark-Window-Operation/</id>
+    <published>2016-08-22T06:39:58.000Z</published>
+    <updated>2016-08-22T06:39:58.000Z</updated>
     
     <content type="html"></content>
     
@@ -49,20 +73,32 @@
     </summary>
     
     
-      <category term="machine learning" scheme="http://zhangshengshan.github.io/tags/machine-learning/"/>
-    
   </entry>
   
   <entry>
-    <title>WordCountSaprk</title>
-    <link href="http://zhangshengshan.github.io/2016/05/09/WordCountSaprk/"/>
-    <id>http://zhangshengshan.github.io/2016/05/09/WordCountSaprk/</id>
-    <published>2016-05-09T11:32:18.000Z</published>
-    <updated>2016-05-09T11:32:43.000Z</updated>
+    <title>Spark 2.0 Introduction</title>
+    <link href="http://zhangshengshan.github.io/2016/08/19/Spark-2-0-Introduction/"/>
+    <id>http://zhangshengshan.github.io/2016/08/19/Spark-2-0-Introduction/</id>
+    <published>2016-08-19T10:04:07.000Z</published>
+    <updated>2016-08-19T10:09:37.000Z</updated>
     
-    <content type="html"></content>
+    <content type="html">&lt;h1 id=&quot;Spark-2-0-MLib-Introduction&quot;&gt;&lt;a href=&quot;#Spark-2-0-MLib-Introduction&quot; class=&quot;headerlink&quot; title=&quot;Spark 2.0 MLib Introduction&quot;&gt;&lt;/a&gt;Spark 2.0 MLib Introduction&lt;/h1&gt;&lt;p&gt;As of Spark 2.0, the RDD-based APIs in the spark.mllib package have entered maintenance mode. The primary Machine Learning API for Spark is now the DataFrame-based API in the spark.ml package.&lt;/p&gt;
+&lt;p&gt;Spark2.0 ,在spark.mllib中的基于RDD的机器学习APIs将会进入维护模式。现在机器学习的主要的API基于DataFrame,位于spark.ml中。&lt;/p&gt;
+&lt;p&gt;What are the implications?&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;MLlib will still support the RDD-based API in spark.mllib with bug fixes.
+MLlib will not add new features to the RDD-based API.
+In the Spark 2.x releases, MLlib will add features to the DataFrames-based API to reach feature parity with the RDD-based API.
+After reaching feature parity (roughly estimated for Spark 2.2), the RDD-based API will be deprecated.
+The RDD-based API is expected to be removed in Spark 3.0.
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Why is MLlib switching to the DataFrame-based API?&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;DataFrames provide a more user-friendly API than RDDs. The many benefits of DataFrames include Spark Datasources, SQL/DataFrame queries, Tungsten and Catalyst optimizations, and uniform APIs across languages.
+The DataFrame-based API for MLlib provides a uniform API across ML algorithms and across multiple languages.
+DataFrames facilitate practical ML Pipelines, particularly feature transformations. See the Pipelines guide for details.
+&lt;/code&gt;&lt;/pre&gt;</content>
     
     <summary type="html">
+    
+      &lt;h1 id=&quot;Spark-2-0-MLib-Introduction&quot;&gt;&lt;a href=&quot;#Spark-2-0-MLib-Introduction&quot; class=&quot;headerlink&quot; title=&quot;Spark 2.0 MLib Introduction&quot;&gt;&lt;/a&gt;Spark
     
     </summary>
     
@@ -72,24 +108,270 @@
   </entry>
   
   <entry>
-    <title>方向</title>
-    <link href="http://zhangshengshan.github.io/2016/04/28/fangxiang/"/>
-    <id>http://zhangshengshan.github.io/2016/04/28/fangxiang/</id>
-    <published>2016-04-28T14:24:55.000Z</published>
-    <updated>2016-05-03T16:23:18.000Z</updated>
+    <title>Save DataFrame into a partitioned table of HIVE</title>
+    <link href="http://zhangshengshan.github.io/2016/08/19/Save-DataFrame-into-a-partitioned-table-of-HIVE/"/>
+    <id>http://zhangshengshan.github.io/2016/08/19/Save-DataFrame-into-a-partitioned-table-of-HIVE/</id>
+    <published>2016-08-19T09:15:15.000Z</published>
+    <updated>2016-08-19T09:30:27.000Z</updated>
     
-    <content type="html">&lt;p&gt;1、MachineLearning&lt;br&gt;2、Spark&lt;br&gt;3、Mysql&lt;br&gt;&lt;img src=&quot;http://7xsqc5.com2.z0.glb.clouddn.com/0.jpg&quot; alt=&quot;aa&quot;&gt;&lt;/p&gt;
+    <content type="html">&lt;h1 id=&quot;How-to-save-a-spark-DataFrame-as-a-patitioned-hive-table&quot;&gt;&lt;a href=&quot;#How-to-save-a-spark-DataFrame-as-a-patitioned-hive-table&quot; class=&quot;headerlink&quot; title=&quot;How to save a spark DataFrame as a patitioned hive table&quot;&gt;&lt;/a&gt;How to save a spark DataFrame as a patitioned hive table&lt;/h1&gt;&lt;h2 id=&quot;utilise-saveAsTable-method&quot;&gt;&lt;a href=&quot;#utilise-saveAsTable-method&quot; class=&quot;headerlink&quot; title=&quot;utilise saveAsTable method&quot;&gt;&lt;/a&gt;utilise saveAsTable method&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;val conf = new SparkConf().setAppName(&amp;quot;Simple Application&amp;quot;).setMaster(&amp;quot;local&amp;quot;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;val sc = new SparkContext(conf)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;val sqlContext = new org.apache.spark.sql.SQLContext(sc)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;import sqlContext.implicits._&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;val hiveContext = new org.apache.spark.sql.hive.HiveContext(sc)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;hiveContext.sql(&amp;quot;use database&amp;quot;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;val cmd =&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;     select&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      col1,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      col2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;     from&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      table&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;quot;&amp;quot;&amp;quot;.stripMargin&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;val yourDf = hiveContext.sql(cmd)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;yourDf.printSchema()&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;yourDf.write.partitionBy(&amp;quot;col2&amp;quot;).saveAsTable(&amp;quot;partitionTableName&amp;quot;)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 </content>
     
     <summary type="html">
     
-      &lt;p&gt;1、MachineLearning&lt;br&gt;2、Spark&lt;br&gt;3、Mysql&lt;br&gt;&lt;img src=&quot;http://7xsqc5.com2.z0.glb.clouddn.com/0.jpg&quot; alt=&quot;aa&quot;&gt;&lt;/p&gt;
-
+      &lt;h1 id=&quot;How-to-save-a-spark-DataFrame-as-a-patitioned-hive-table&quot;&gt;&lt;a href=&quot;#How-to-save-a-spark-DataFrame-as-a-patitioned-hive-table&quot; class=
     
     </summary>
     
     
-      <category term="学习计划" scheme="http://zhangshengshan.github.io/tags/%E5%AD%A6%E4%B9%A0%E8%AE%A1%E5%88%92/"/>
+      <category term="Spark" scheme="http://zhangshengshan.github.io/tags/Spark/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>SparkPassFunctions</title>
+    <link href="http://zhangshengshan.github.io/2016/08/11/SparkPassFunctions/"/>
+    <id>http://zhangshengshan.github.io/2016/08/11/SparkPassFunctions/</id>
+    <published>2016-08-11T07:19:37.000Z</published>
+    <updated>2016-08-11T07:24:49.000Z</updated>
+    
+    <content type="html">&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;class MyClass &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  val field = &amp;quot;Hello&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  def doStuff(rdd: RDD[String]): RDD[String] = &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  val field_ = this.field&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  rdd.map(x =&amp;gt; field_ + x)&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class
+    
+    </summary>
+    
+    
+      <category term="Spark" scheme="http://zhangshengshan.github.io/tags/Spark/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>MergeSort</title>
+    <link href="http://zhangshengshan.github.io/2016/07/26/MergeSort/"/>
+    <id>http://zhangshengshan.github.io/2016/07/26/MergeSort/</id>
+    <published>2016-07-26T12:30:03.000Z</published>
+    <updated>2016-07-26T12:39:33.000Z</updated>
+    
+    <content type="html">&lt;p&gt;归并排序&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;def msort[A](less: (A, A) =&amp;gt; Boolean)(xs: List[A]): List[A] = &amp;#123; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    def merge(xs1: List[A], xs2: List[A]): List[A] =&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        if (xs1.isEmpty) xs2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        else if (xs2.isEmpty) xs1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        else if (less(xs1.head, xs2.head)) xs1.head :: merge(xs1.tail, xs2) else xs2.head :: merge(xs1, xs2.tail)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    val n = xs.length/2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    if (n == 0) xs&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    else merge(msort(less)(xs take n), msort(less)(xs drop n))&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;如果你对python列表的用法比较熟悉的话，可以按照如下的方式理解&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;xs take n   // xs[0:n+1]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;xs drop n   // xs[n+1:]&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;msort函数应该按照如下方式进行调用&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;msort((x: Int, y: Int) =&amp;gt; x &amp;lt; y)(List(5, 7, 1, 3))&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;归并排序&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br
+    
+    </summary>
+    
+    
+      <category term="Scala" scheme="http://zhangshengshan.github.io/tags/Scala/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ScalaList</title>
+    <link href="http://zhangshengshan.github.io/2016/07/26/ScalaList/"/>
+    <id>http://zhangshengshan.github.io/2016/07/26/ScalaList/</id>
+    <published>2016-07-26T05:11:12.000Z</published>
+    <updated>2016-07-26T05:57:16.000Z</updated>
+    
+    <content type="html">&lt;p&gt;Lists are not built in in Scala; they are defined by an abstract class List, &lt;strong&gt;which comes with two subclasses for :: and Nil.&lt;/strong&gt;&lt;br&gt;List 并不是Scala的内置类型。List被定义为抽象类。&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;package scala&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;abstract class List[+A] &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;List is an abstract class, so one cannot define elements by calling the empty List constructor (e.g. by new List). The class has a type parameter a. It is co-variant in this parameter,which means thatList[S] &amp;lt;: List[T] for all types S and T such thatS &amp;lt;: T.The class is situated in the package scala.This is a package containing the most important standard classes of Scala. List defines a number of methods, which are explained in the following.&lt;br&gt;List 是抽象类，所以没有办法通过空的List构造器来定义元素。List存在一个类型参数A。该参数是协变类型, 对于任意类型S和T，如果S&amp;lt;:T, 则 List[S]&amp;lt;:List[T]。该类的定义在scala package中。这个包是Scala中最重要的标准calsses。&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Lists are not built in in Scala; they are defined by an abstract class List, &lt;strong&gt;which comes with two subclasses for :: and Nil.&lt;/str
+    
+    </summary>
+    
+    
+      <category term="Scala" scheme="http://zhangshengshan.github.io/tags/Scala/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Scala call-by-name call-by-value</title>
+    <link href="http://zhangshengshan.github.io/2016/07/19/Scala-call-by-name-call-by-value/"/>
+    <id>http://zhangshengshan.github.io/2016/07/19/Scala-call-by-name-call-by-value/</id>
+    <published>2016-07-19T15:30:34.000Z</published>
+    <updated>2016-07-19T15:50:16.000Z</updated>
+    
+    <content type="html">&lt;p&gt;Call-by-value has the advantage that it avoids repeated evaluation of arguments.&lt;br&gt;Call-by-name has the advantage that it avoids evaluation of arguments when the&lt;br&gt;parameter is not used at all by the function. Call-by-value is usually more efficient&lt;br&gt;than call-by-name, but a call-by-value evaluation might loop where a call-by-name&lt;br&gt;evaluation would terminate. Consider:&lt;/p&gt;
+&lt;p&gt;Call-by-value 的优势在于避免不断的计算参数。而call-by-name的优势在于如果一个函数根本就不会用到的参数，那么也不会被计算，与call-by-value恰好相反。下面的例子展示了一个Call-by-value会不停循环但是Call-by-name会停止的例子。&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;scala&amp;gt; def loop: Int = loop&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;loop: Int&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;scala&amp;gt; def first(x: Int, y: Int) = x&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;first: (Int,Int)Int&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;Then first(1, loop) reduces with call-by-name to 1, whereas the same term reduces with call-by-value repeatedly to itself, hence evaluation does not terminate.&lt;br&gt;first(1, loop)&lt;br&gt;→ first(1, loop)&lt;br&gt;→ first(1, loop)&lt;br&gt;→ …&lt;br&gt;上面的例子，之所以不停的循环的原因就是,y 被声明为 Call-by-value，因而，按照上面的说法，无论是否这个参数会被用到，该参数都会被计算，所以会不停的循环。&lt;/p&gt;
+&lt;p&gt;Scala uses call-by-value by default, but it switches to call-by-name evaluation if the&lt;br&gt;parameter type is preceded by =&amp;gt;.&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;scala&amp;gt; def constOne(x: Int, y: =&amp;gt; Int) = 1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;constOne: (Int,=&amp;gt; Int)Int&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;scala&amp;gt; constOne(1, loop)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;unnamed0: Int = 1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;scala&amp;gt; constOne(loop, 2) // gives an infinite loop.&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;constOne(1,loop) 会停止，y被声明为Call-by-name, 所以当没有用到这个参数的时候,则不会被计算，因此不会陷入无限循环。&lt;br&gt;constOne(loop,2) 则恰好相反。&lt;/p&gt;
+&lt;p&gt;本文示例 来自于  《ScalaByExample》,感谢原作者。&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Call-by-value has the advantage that it avoids repeated evaluation of arguments.&lt;br&gt;Call-by-name has the advantage that it avoids evaluat
+    
+    </summary>
+    
+    
+      <category term="Scala" scheme="http://zhangshengshan.github.io/tags/Scala/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>机器学习相关材料</title>
+    <link href="http://zhangshengshan.github.io/2016/07/13/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%9B%B8%E5%85%B3%E6%9D%90%E6%96%99/"/>
+    <id>http://zhangshengshan.github.io/2016/07/13/机器学习相关材料/</id>
+    <published>2016-07-13T12:42:36.000Z</published>
+    <updated>2016-07-13T12:58:27.000Z</updated>
+    
+    <content type="html">&lt;p&gt;1、数学基础&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;1、微积分 &lt;a href=&quot;http://v.163.com/special/sp/singlevariablecalculus.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://v.163.com/special/sp/singlevariablecalculus.html&lt;/a&gt;  &lt;a href=&quot;http://open.163.com/special/opencourse/multivariable.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://open.163.com/special/opencourse/multivariable.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;2、线性代数 &lt;a href=&quot;http://open.163.com/special/opencourse/daishu.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://open.163.com/special/opencourse/daishu.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;3、概率统计&lt;a href=&quot;http://open.163.com/special/Khan/probability.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://open.163.com/special/Khan/probability.html&lt;/a&gt;&lt;br&gt;想要深入学习机器学习，需要具有扎实的数学基础（矩阵分析和概率统计是基础的理论）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;2、进阶版本数学基础课程&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;1、最优化理论（重点凸优化理论）  &lt;a href=&quot;http://stanford.edu/~boyd/cvxbook/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://stanford.edu/~boyd/cvxbook/&lt;/a&gt;   &lt;a href=&quot;http://xiaoyc.com/duality-theory-for-optimization/#1-1-lagrangian&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://xiaoyc.com/duality-theory-for-optimization/#1-1-lagrangian&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;2、时变函数与泛函分析 &lt;a href=&quot;http://ocw.nctu.edu.tw/course_list.php?page=2&amp;amp;bgid=1&amp;amp;gid=1&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://ocw.nctu.edu.tw/course_list.php?page=2&amp;amp;bgid=1&amp;amp;gid=1&lt;/a&gt;  &lt;a href=&quot;http://open.163.com/special/opencourse/fanhanfenxi.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://open.163.com/special/opencourse/fanhanfenxi.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;3、随机过程 Hyperlink: Stochastic Process MIT View the complete course: Discrete Stochastic Processes&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;3、机器学习基础课程&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;1、Coursera上Andrew Ng Andrew Ng的《机器学习》&lt;/li&gt;
+&lt;li&gt;2、林軒田(国立台湾大学) 機器學習基石&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;4、机器学习基础课程&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;1、 《统计学习方法》李航&lt;/li&gt;
+&lt;li&gt;2、 《机器学习导论》&lt;/li&gt;
+&lt;li&gt;3、 《PRML》&lt;/li&gt;
+&lt;li&gt;4、 《图解机器学习》[日]杉山将&lt;/li&gt;
+&lt;li&gt;5、   Machine Learning: A Probabilistic Prespective （Kevin Murphy）&lt;/li&gt;
+&lt;li&gt;6、   Pattern Recognition and Machine Learning （Christopher Bishop）&lt;/li&gt;
+&lt;li&gt;7、 《Spark机器学习》&lt;/li&gt;
+&lt;li&gt;8、 《机器学习实战》&lt;/li&gt;
+&lt;li&gt;9、 《贝叶斯思维:统计建模的Python学习法》&lt;/li&gt;
+&lt;li&gt;10、Python自然语言处理》&lt;/li&gt;
+&lt;li&gt;11、数学之美 （吴军）&lt;/li&gt;
+&lt;li&gt;12、Web智能算法 （Haralambos Marmanis, Dmitry Babenko）&lt;/li&gt;
+&lt;li&gt;13、集体智慧编程 （Toby Segaran）&lt;/li&gt;
+&lt;li&gt;14、推荐系统实践&lt;/li&gt;
+&lt;li&gt;15、计算广告学&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;5、深度学习（注定将成为最近几年的爆发式增长）&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;1、《Deep Learning》&lt;a href=&quot;http://www.deeplearningbook.org&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.deeplearningbook.org&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;2、  CSDN Blog &lt;a href=&quot;http://blog.csdn.net/zouxy09/article/details/8775360&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://blog.csdn.net/zouxy09/article/details/8775360&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;3、《斯坦福大学深度学习教程》&lt;a href=&quot;http://ufldl.stanford.edu/tutorial&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://ufldl.stanford.edu/tutorial&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;6、 杂项&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;《Choosing a Machine Learning Classifier》&lt;/li&gt;
+&lt;li&gt;《An Introduction to Deep Learning: From Perceptrons to Deep Networks》 译文：《&lt;a href=&quot;http://www.cnblogs.com/xiaowanyer/p/3701944.html》&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.cnblogs.com/xiaowanyer/p/3701944.html》&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;《The LION Way: Machine Learning plus Intelligent Optimization》&lt;/li&gt;
+&lt;li&gt;《分布式并行处理的数据》&lt;/li&gt;
+&lt;li&gt;《Deep Learning for Natural Language Processing and Related Applications》&lt;/li&gt;
+&lt;li&gt;《Neural Networks and Deep Learning》&lt;/li&gt;
+&lt;li&gt;《分布式机器学习的故事》&lt;/li&gt;
+&lt;li&gt;《Deep Learning 101》&lt;/li&gt;
+&lt;li&gt;《Deep learning from the bottom up》&lt;/li&gt;
+&lt;li&gt;《Deep Learning（深度学习）学习笔记整理系列》&lt;/li&gt;
+&lt;li&gt;《Google Turns To Deep Learning Classification To Fight Web Spam》&lt;/li&gt;
+&lt;li&gt;《Deep Learning Sentiment Analysis for Movie Reviews using Neo4j》&lt;/li&gt;
+&lt;li&gt;《EMNLP上两篇关于股票趋势的应用论文 》&lt;/li&gt;
+&lt;li&gt;《Learning to Rank for Information Retrieval and Natural Language Processing》&lt;/li&gt;
+&lt;li&gt;《Geoffrey E. Hinton》&lt;/li&gt;
+&lt;li&gt;《Andrej Karpathy的深度强化学习演示》 论文在这里&lt;/li&gt;
+&lt;li&gt;《用大数据和机器学习做股票价格预测》&lt;/li&gt;
+&lt;li&gt;《机器学习经典算法详解及Python实现–基于SMO的SVM分类器》&lt;/li&gt;
+&lt;li&gt;《Use Google’s Word2Vec for movie reviews》&lt;/li&gt;
+&lt;li&gt;《深度卷积神经网络下围棋》&lt;/li&gt;
+&lt;li&gt;《机器学习经典算法详解及Python实现–线性回归（Linear Regression）算法》&lt;/li&gt;
+&lt;li&gt;《Caffe》&lt;/li&gt;
+&lt;li&gt;《GoogLeNet深度学习模型的Caffe复现 》 GoogleNet论文&lt;/li&gt;
+&lt;li&gt;《Deep Learning实战之word2vec》&lt;/li&gt;
+&lt;li&gt;《A Deep Dive into Recurrent Neural Nets》&lt;/li&gt;
+&lt;li&gt;《Geoffrey E. Hinton个人主页》&lt;/li&gt;
+&lt;li&gt;《Deep Learning on Hadoop 2.0》&lt;/li&gt;
+&lt;li&gt;《美团推荐算法实践》&lt;/li&gt;
+&lt;li&gt;《The Trouble with SVMs》&lt;/li&gt;
+&lt;li&gt;《Gaussian Processes for Machine Learning》&lt;/li&gt;
+&lt;li&gt;《Introduction to ARMA Time Series Models – simplified》&lt;/li&gt;
+&lt;li&gt;《Neural Net in C++ Tutorial》&lt;/li&gt;
+&lt;li&gt;《Deep Learning Tutorials》&lt;/li&gt;
+&lt;li&gt;《Deep Learning, The Curse of Dimensionality, and Autoencoders》&lt;/li&gt;
+&lt;li&gt;《Topic modeling with LDA: MLlib meets GraphX》&lt;/li&gt;
+&lt;li&gt;《Deep Learning for Multi-label Classification》&lt;/li&gt;
+&lt;li&gt;《Google DeepMind publications》  AlphaGo团队官方论文&lt;/li&gt;
+&lt;li&gt;《AM207: Monte Carlo Methods, Stochastic Optimization》&lt;/li&gt;
+&lt;li&gt;《Back-to-Basics Weekend Reading - Machine Learning》&lt;/li&gt;
+&lt;li&gt;《A Probabilistic Theory of Deep Learning》&lt;/li&gt;
+&lt;li&gt;《How does Quora use machine learning in 2015?》&lt;/li&gt;
+&lt;li&gt;《Parallel Machine Learning with scikit-learn and IPython》&lt;/li&gt;
+&lt;li&gt;《Time Series Econometrics - A Concise Course》&lt;/li&gt;
+&lt;li&gt;《A comparison of open source tools for sentiment analysis》&lt;/li&gt;
+&lt;li&gt;《International Joint Conference on Artificial Intelligence Accepted paper》&lt;/li&gt;
+&lt;li&gt;《How to Evaluate Machine Learning Models, Part 1: Orientation》 How to Evaluate Machine Learning Models, Part 2a: Classification Metrics,How to Evaluate Machine Learning Models, Part 2b: Ranking and Regression Metrics.&lt;/li&gt;
+&lt;li&gt;《Learning scikit-learn: Machine Learning in Python》&lt;/li&gt;
+&lt;li&gt;《Lightning fast Machine Learning with Spark》&lt;/li&gt;
+&lt;li&gt;《How we’re using machine learning to fight shell selling》&lt;/li&gt;
+&lt;li&gt;《Mining of Massive Datasets》&lt;/li&gt;
+&lt;li&gt;《Advances in Extreme Learning Machines》&lt;/li&gt;
+&lt;li&gt;《The Curse of Dimensionality in classification》&lt;/li&gt;
+&lt;li&gt;《Demistifying LSTM Neural Networks》&lt;/li&gt;
+&lt;li&gt;《Decoding Dimensionality Reduction, PCA and SVD》&lt;/li&gt;
+&lt;li&gt;《What are the advantages of different classification algorithms?》&lt;/li&gt;
+&lt;li&gt;《Kaggle R Tutorial on Machine Learning》 《Interactive R Tutorial: Machine Learning for the Titanic Competition》.&lt;/li&gt;
+&lt;li&gt;《Logistic Regression and Gradient Descent》&lt;/li&gt;
+&lt;li&gt;《Stock Forecasting With Machine Learning - Seven Possible Errors》&lt;/li&gt;
+&lt;li&gt;《LR原理解析》  &lt;a href=&quot;http://www.cnblogs.com/xiaowanyer/p/3701944.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.cnblogs.com/xiaowanyer/p/3701944.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;机器学习顶级会议和杂志 &lt;a href=&quot;http://icml.cc/2015/?page_id=175&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://icml.cc/2015/?page_id=175&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;贝耶斯回归材料 &lt;a href=&quot;http://blog.csdn.net/haoni123321/article/details/37913795&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://blog.csdn.net/haoni123321/article/details/37913795&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;贝耶斯回归材料 &lt;a href=&quot;http://mindhacks.cn/2008/09/21/the-magical-bayesian-method/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://mindhacks.cn/2008/09/21/the-magical-bayesian-method/&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;AlphaGo原理解析&lt;a href=&quot;https://www.youtube.com/watch?v=63FDxJ5e_Ew&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://www.youtube.com/watch?v=63FDxJ5e_Ew&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;1、数学基础&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;1、微积分 &lt;a href=&quot;http://v.163.com/special/sp/singlevariablecalculus.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://v.163.c
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>过拟合的原因</title>
+    <link href="http://zhangshengshan.github.io/2016/07/13/%E8%BF%87%E6%8B%9F%E5%90%88%E7%9A%84%E5%8E%9F%E5%9B%A0/"/>
+    <id>http://zhangshengshan.github.io/2016/07/13/过拟合的原因/</id>
+    <published>2016-07-13T05:46:10.000Z</published>
+    <updated>2016-07-13T15:52:54.000Z</updated>
+    
+    <content type="html">&lt;h1 id=&quot;过拟合产生原因&quot;&gt;&lt;a href=&quot;#过拟合产生原因&quot; class=&quot;headerlink&quot; title=&quot;过拟合产生原因&quot;&gt;&lt;/a&gt;过拟合产生原因&lt;/h1&gt;&lt;h2 id=&quot;观测数据存在误差&quot;&gt;&lt;a href=&quot;#观测数据存在误差&quot; class=&quot;headerlink&quot; title=&quot;观测数据存在误差&quot;&gt;&lt;/a&gt;观测数据存在误差&lt;/h2&gt;&lt;p&gt;用于训练的样本数据，即观测数据因为各种个样的原因，总会产生误差。如果选择的假设过分追求能够完美解释观测数据（对于回归问题，可能是拟合曲线“穿过”所有的样本点，或者类似于均方误差过小），都有可能造成过拟合的现象。造成这种现象的根本原因在于，拟合曲线把误差也完美的学习了。&lt;/p&gt;
+&lt;h2 id=&quot;产生样本因素很多，但是实际可能只有小部分提取出来&quot;&gt;&lt;a href=&quot;#产生样本因素很多，但是实际可能只有小部分提取出来&quot; class=&quot;headerlink&quot; title=&quot;产生样本因素很多，但是实际可能只有小部分提取出来&quot;&gt;&lt;/a&gt;产生样本因素很多，但是实际可能只有小部分提取出来&lt;/h2&gt;&lt;p&gt;影响产生观测数据的因素有很多，但是现实中可能仅提取几个和结果相关度很高的因素来进行分析。这个时候观察数据会倾向于围绕你的有限模型的预测结果呈正态分布，于是你实际观察到的结果就是这个正态分布的随机取样，这个取样很可能受到其余因素的影响偏离你的模型所预测的中心，这个时候便不能贪心不足地试图通过改变模型来“完美”匹配数据，因为那些使结果偏离你的预测的贡献因素不是你这个有限模型里面含有的因素所能概括的，硬要打肿脸充胖子只能导致不实际的模型。&lt;/p&gt;
+&lt;h2 id=&quot;奥卡姆剃刀法则&quot;&gt;&lt;a href=&quot;#奥卡姆剃刀法则&quot; class=&quot;headerlink&quot; title=&quot;奥卡姆剃刀法则&quot;&gt;&lt;/a&gt;奥卡姆剃刀法则&lt;/h2&gt;&lt;p&gt;$$&lt;br&gt;p\left( h|D\right )   = p\left( h\right ) p\left( D|h\right )&lt;br&gt;$$&lt;br&gt;高卡姆剃刀法则的含义是如果存在多个假设和观察一致，则应当选择最简单的那一个。最简单的假设意味着$\left( h\right)$较大，而与观测一致，意味着似然数值较大，即$p\left( D|h\right )$较大。&lt;/p&gt;
+&lt;p&gt;奥卡姆剃刀法则青睐于先验概率，认为先验较大的模型有较大的优势；最大似然法则认为似然大的模型具有较大的优势；而贝叶斯法则则认为二者乘积决定模型的选择问题。&lt;/p&gt;
+&lt;h2 id=&quot;贝叶斯奥卡姆剃刀&quot;&gt;&lt;a href=&quot;#贝叶斯奥卡姆剃刀&quot; class=&quot;headerlink&quot; title=&quot;贝叶斯奥卡姆剃刀&quot;&gt;&lt;/a&gt;贝叶斯奥卡姆剃刀&lt;/h2&gt;&lt;p&gt;上面的奥卡姆剃刀法则描述的是传统的剃刀法则，主要指先验概率$\left( h\right)$,而贝叶斯法奥卡姆剃刀法其实和似然$p\left( D|h\right )$上面，即该法则主要衡量的因素是似然本身出现的概率大小。 &lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;过拟合产生原因&quot;&gt;&lt;a href=&quot;#过拟合产生原因&quot; class=&quot;headerlink&quot; title=&quot;过拟合产生原因&quot;&gt;&lt;/a&gt;过拟合产生原因&lt;/h1&gt;&lt;h2 id=&quot;观测数据存在误差&quot;&gt;&lt;a href=&quot;#观测数据存在误差&quot; class=&quot;headerli
+    
+    </summary>
+    
     
   </entry>
   
@@ -106,28 +388,6 @@
     <summary type="html">
     
       &lt;p&gt;spark 的各种不同的transformation操作,可以根据是否依赖父RDDs的所有partision分为‘窄依赖’和‘宽依赖’,简单的说,有shuffle操作的就是宽依赖,而没有shuffle操作的就是窄依赖。&lt;br&gt;对于窄依赖,spark会尽量将他们划分为同一个s
-    
-    </summary>
-    
-    
-      <category term="Spark" scheme="http://zhangshengshan.github.io/tags/Spark/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Spark-combineByKey</title>
-    <link href="http://zhangshengshan.github.io/2016/04/22/Spark-combineByKey/"/>
-    <id>http://zhangshengshan.github.io/2016/04/22/Spark-combineByKey/</id>
-    <published>2016-04-22T10:57:36.000Z</published>
-    <updated>2016-04-22T16:07:36.000Z</updated>
-    
-    <content type="html">&lt;p&gt;谈谈自己对Spark的API combineByKey的理解。&lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;谈谈自己对Spark的API combineByKey的理解。&lt;/p&gt;
-
     
     </summary>
     
@@ -155,24 +415,6 @@
     
     
       <category term="Python" scheme="http://zhangshengshan.github.io/tags/Python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="http://zhangshengshan.github.io/2016/04/16/hello-world/"/>
-    <id>http://zhangshengshan.github.io/2016/04/16/hello-world/</id>
-    <published>2016-04-16T05:05:32.000Z</published>
-    <updated>2016-04-16T05:05:32.000Z</updated>
-    
-    <content type="html">&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;variable&quot;&gt;$echo&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&quot;Hello World&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</content>
-    
-    <summary type="html">
-    
-      &lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span clas
-    
-    </summary>
-    
     
   </entry>
   

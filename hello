@@ -1,0 +1,13 @@
+#!/bin/bash
+git add	_posts/2016-04-01-welcome-to-jekyll - Copy.markdown
+git add	_posts/2016-04-15-welcome-to-jekyll .markdown
+git add	public/2016/04/25/SPARK\347\232\204\345\256\275\344\276\235\350\265\226\345\222\214\347\252\204\344\276\235\350\265\226/index.html
+git add	public/tags/\345\255\246\344\271\240\350\256\241\345\210\222/index.html
+git add	themes/freemind (modified content)
+git add	.deploy_git/
+git add	.sass-cache/
+git add	public/2016/05/
+git add	public/2016/07/
+git add	public/archives/2016/05/
+git add	public/archives/2016/07/
+git add	public/tags/machine-learning/
