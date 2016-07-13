@@ -4,6 +4,54 @@
   
     
     <entry>
+      <title><![CDATA[asdf]]></title>
+      <url>http://zhangshengshan.github.io/2016/07/13/asdf/</url>
+      <content type="html"><![CDATA[<p>aaaaaaaaaa</p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[最优化]]></title>
+      <url>http://zhangshengshan.github.io/2016/05/23/%E6%9C%80%E4%BC%98%E5%8C%96/</url>
+      <content type="html"></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[WordCountSaprk]]></title>
+      <url>http://zhangshengshan.github.io/2016/05/09/WordCountSaprk/</url>
+      <content type="html"></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[方向]]></title>
+      <url>http://zhangshengshan.github.io/2016/04/28/fangxiang/</url>
+      <content type="html"><![CDATA[<p>1、MachineLearning<br>2、Spark<br>3、Mysql<br><img src="http://7xsqc5.com2.z0.glb.clouddn.com/0.jpg" alt="aa"></p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[SPARK的宽依赖和窄依赖]]></title>
+      <url>http://zhangshengshan.github.io/2016/04/25/SPARK%E7%9A%84%E5%AE%BD%E4%BE%9D%E8%B5%96%E5%92%8C%E7%AA%84%E4%BE%9D%E8%B5%96/</url>
+      <content type="html"><![CDATA[<p>spark 的各种不同的transformation操作,可以根据是否依赖父RDDs的所有partision分为‘窄依赖’和‘宽依赖’,简单的说,有shuffle操作的就是宽依赖,而没有shuffle操作的就是窄依赖。<br>对于窄依赖,spark会尽量将他们划分为同一个stage,而宽依赖则会称为另外的stage。</p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Spark-combineByKey]]></title>
+      <url>http://zhangshengshan.github.io/2016/04/22/Spark-combineByKey/</url>
+      <content type="html"><![CDATA[<p>谈谈自己对Spark的API combineByKey的理解。</p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[1-100素数判断pyhon程序]]></title>
+      <url>http://zhangshengshan.github.io/2016/04/21/1-100%E7%B4%A0%E6%95%B0%E5%88%A4%E6%96%ADpyhon%E7%A8%8B%E5%BA%8F/</url>
+      <content type="html"><![CDATA[<p>求取1-100的所有素数，采用函数式编程<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">issu</span><span class="params">(x)</span>:</span></span><br><span class="line">    result=map(<span class="keyword">lambda</span> y:x%y,range(<span class="number">2</span>,x))</span><br><span class="line">    <span class="keyword">if</span>  len(result)!=<span class="number">0</span> <span class="keyword">and</span> <span class="number">0</span> <span class="keyword">not</span> <span class="keyword">in</span> result:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">print</span> filter(issu,range(<span class="number">1</span>,<span class="number">101</span>))</span><br></pre></td></tr></table></figure></p>
+<p>答案为<br><strong>[3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97]</strong></p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[Hello World]]></title>
       <url>http://zhangshengshan.github.io/2016/04/16/hello-world/</url>
       <content type="html"><![CDATA[<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$echo</span> <span class="string">"Hello World"</span></span><br></pre></td></tr></table></figure>]]></content>

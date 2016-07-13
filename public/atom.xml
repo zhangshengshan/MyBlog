@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zhangshengshan.github.io/"/>
-  <updated>2016-04-16T04:42:49.000Z</updated>
+  <updated>2016-07-13T05:12:24.000Z</updated>
   <id>http://zhangshengshan.github.io/</id>
   
   <author>
@@ -16,11 +16,154 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>asdf</title>
+    <link href="http://zhangshengshan.github.io/2016/07/13/asdf/"/>
+    <id>http://zhangshengshan.github.io/2016/07/13/asdf/</id>
+    <published>2016-07-13T03:49:29.000Z</published>
+    <updated>2016-07-13T05:12:24.000Z</updated>
+    
+    <content type="html">&lt;p&gt;aaaaaaaaaa&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;aaaaaaaaaa&lt;/p&gt;
+
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>最优化</title>
+    <link href="http://zhangshengshan.github.io/2016/05/23/%E6%9C%80%E4%BC%98%E5%8C%96/"/>
+    <id>http://zhangshengshan.github.io/2016/05/23/最优化/</id>
+    <published>2016-05-23T11:44:03.000Z</published>
+    <updated>2016-05-23T11:44:32.000Z</updated>
+    
+    <content type="html"></content>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+      <category term="machine learning" scheme="http://zhangshengshan.github.io/tags/machine-learning/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>WordCountSaprk</title>
+    <link href="http://zhangshengshan.github.io/2016/05/09/WordCountSaprk/"/>
+    <id>http://zhangshengshan.github.io/2016/05/09/WordCountSaprk/</id>
+    <published>2016-05-09T11:32:18.000Z</published>
+    <updated>2016-05-09T11:32:43.000Z</updated>
+    
+    <content type="html"></content>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+      <category term="Spark" scheme="http://zhangshengshan.github.io/tags/Spark/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>方向</title>
+    <link href="http://zhangshengshan.github.io/2016/04/28/fangxiang/"/>
+    <id>http://zhangshengshan.github.io/2016/04/28/fangxiang/</id>
+    <published>2016-04-28T14:24:55.000Z</published>
+    <updated>2016-05-03T16:23:18.000Z</updated>
+    
+    <content type="html">&lt;p&gt;1、MachineLearning&lt;br&gt;2、Spark&lt;br&gt;3、Mysql&lt;br&gt;&lt;img src=&quot;http://7xsqc5.com2.z0.glb.clouddn.com/0.jpg&quot; alt=&quot;aa&quot;&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;1、MachineLearning&lt;br&gt;2、Spark&lt;br&gt;3、Mysql&lt;br&gt;&lt;img src=&quot;http://7xsqc5.com2.z0.glb.clouddn.com/0.jpg&quot; alt=&quot;aa&quot;&gt;&lt;/p&gt;
+
+    
+    </summary>
+    
+    
+      <category term="学习计划" scheme="http://zhangshengshan.github.io/tags/%E5%AD%A6%E4%B9%A0%E8%AE%A1%E5%88%92/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>SPARK的宽依赖和窄依赖</title>
+    <link href="http://zhangshengshan.github.io/2016/04/25/SPARK%E7%9A%84%E5%AE%BD%E4%BE%9D%E8%B5%96%E5%92%8C%E7%AA%84%E4%BE%9D%E8%B5%96/"/>
+    <id>http://zhangshengshan.github.io/2016/04/25/SPARK的宽依赖和窄依赖/</id>
+    <published>2016-04-25T15:37:04.000Z</published>
+    <updated>2016-04-25T16:05:07.000Z</updated>
+    
+    <content type="html">&lt;p&gt;spark 的各种不同的transformation操作,可以根据是否依赖父RDDs的所有partision分为‘窄依赖’和‘宽依赖’,简单的说,有shuffle操作的就是宽依赖,而没有shuffle操作的就是窄依赖。&lt;br&gt;对于窄依赖,spark会尽量将他们划分为同一个stage,而宽依赖则会称为另外的stage。&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;spark 的各种不同的transformation操作,可以根据是否依赖父RDDs的所有partision分为‘窄依赖’和‘宽依赖’,简单的说,有shuffle操作的就是宽依赖,而没有shuffle操作的就是窄依赖。&lt;br&gt;对于窄依赖,spark会尽量将他们划分为同一个s
+    
+    </summary>
+    
+    
+      <category term="Spark" scheme="http://zhangshengshan.github.io/tags/Spark/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Spark-combineByKey</title>
+    <link href="http://zhangshengshan.github.io/2016/04/22/Spark-combineByKey/"/>
+    <id>http://zhangshengshan.github.io/2016/04/22/Spark-combineByKey/</id>
+    <published>2016-04-22T10:57:36.000Z</published>
+    <updated>2016-04-22T16:07:36.000Z</updated>
+    
+    <content type="html">&lt;p&gt;谈谈自己对Spark的API combineByKey的理解。&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;谈谈自己对Spark的API combineByKey的理解。&lt;/p&gt;
+
+    
+    </summary>
+    
+    
+      <category term="Spark" scheme="http://zhangshengshan.github.io/tags/Spark/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>1-100素数判断pyhon程序</title>
+    <link href="http://zhangshengshan.github.io/2016/04/21/1-100%E7%B4%A0%E6%95%B0%E5%88%A4%E6%96%ADpyhon%E7%A8%8B%E5%BA%8F/"/>
+    <id>http://zhangshengshan.github.io/2016/04/21/1-100素数判断pyhon程序/</id>
+    <published>2016-04-21T10:08:04.000Z</published>
+    <updated>2016-04-21T14:35:21.000Z</updated>
+    
+    <content type="html">&lt;p&gt;求取1-100的所有素数，采用函数式编程&lt;br&gt;&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;issu&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(x)&lt;/span&gt;:&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    result=map(&lt;span class=&quot;keyword&quot;&gt;lambda&lt;/span&gt; y:x%y,range(&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;,x))&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;  len(result)!=&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;and&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;not&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt; result:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;else&lt;/span&gt;:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;print&lt;/span&gt; filter(issu,range(&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;101&lt;/span&gt;))&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;答案为&lt;br&gt;&lt;strong&gt;[3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97]&lt;/strong&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;求取1-100的所有素数，采用函数式编程&lt;br&gt;&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;l
+    
+    </summary>
+    
+    
+      <category term="Python" scheme="http://zhangshengshan.github.io/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Hello World</title>
     <link href="http://zhangshengshan.github.io/2016/04/16/hello-world/"/>
     <id>http://zhangshengshan.github.io/2016/04/16/hello-world/</id>
-    <published>2016-04-15T16:09:50.000Z</published>
-    <updated>2016-04-16T04:42:49.000Z</updated>
+    <published>2016-04-16T05:05:32.000Z</published>
+    <updated>2016-04-16T05:05:32.000Z</updated>
     
     <content type="html">&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;variable&quot;&gt;$echo&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&quot;Hello World&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</content>
     
