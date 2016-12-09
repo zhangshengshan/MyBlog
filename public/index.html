@@ -117,6 +117,28 @@ var _hmt = _hmt || [];
 	
 	<!-- display as entry -->	
 		<h3 class="title">
+			<div class="date"> 2016-12-09 </div>
+			<div class="article-title"><a href="/2016/12/09/SparkDataFrameLikeSql/" >SparkDataFrameLikeSql</a></div>						
+		</h3>
+	
+
+
+			<div class="entry">
+  <div class="row">
+	
+	
+		<p>The idea of spark Datafame is inspired from dataframe of pandas which is a package of python for computing. On my opinion, dataframe can by prefered by the people who is familiar with SQL or BI developers, for it is easy to learn.</p>
+
+	
+	</div>
+  <a type="button" href="/2016/12/09/SparkDataFrameLikeSql/#more" class="btn btn-default more">Read More</a>
+</div>
+
+		
+			
+	
+	<!-- display as entry -->	
+		<h3 class="title">
 			<div class="date"> 2016-12-05 </div>
 			<div class="article-title"><a href="/2016/12/05/save-spark-rdd-into-Mysql/" >save spark rdd into Mysql</a></div>						
 		</h3>
@@ -330,30 +352,6 @@ DataFrames facilitate practical ML Pipelines, particularly feature transformatio
 </div>
 
 		
-			
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2016-07-26 </div>
-			<div class="article-title"><a href="/2016/07/26/ScalaList/" >ScalaList</a></div>						
-		</h3>
-	
-
-
-			<div class="entry">
-  <div class="row">
-	
-	
-		<p>Lists are not built in in Scala; they are defined by an abstract class List, <strong>which comes with two subclasses for :: and Nil.</strong><br>List 并不是Scala的内置类型。List被定义为抽象类。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">package scala</span><br><span class="line">abstract class List[+A] &#123;</span><br></pre></td></tr></table></figure>
-<p>List is an abstract class, so one cannot define elements by calling the empty List constructor (e.g. by new List). The class has a type parameter a. It is co-variant in this parameter,which means thatList[S] &lt;: List[T] for all types S and T such thatS &lt;: T.The class is situated in the package scala.This is a package containing the most important standard classes of Scala. List defines a number of methods, which are explained in the following.<br>List 是抽象类，所以没有办法通过空的List构造器来定义元素。List存在一个类型参数A。该参数是协变类型, 对于任意类型S和T，如果S&lt;:T, 则 List[S]&lt;:List[T]。该类的定义在scala package中。这个包是Scala中最重要的标准calsses。</p>
-
-	
-	</div>
-  <a type="button" href="/2016/07/26/ScalaList/#more" class="btn btn-default more">Read More</a>
-</div>
-
-		
 
 		</div>
 
@@ -404,13 +402,15 @@ DataFrames facilitate practical ML Pipelines, particularly feature transformatio
 		<h4>Tag Cloud</h4>
 		<ul class="tag_box inline list-unstyled">		
 		
-			<li><a href="/tags/Scala/">Scala<span>3</span></a></li>
-		
-			<li><a href="/tags/Spark/">Spark<span>4</span></a></li>
+			<li><a href="/tags/Python/">Python<span>1</span></a></li>
 		
 			<li><a href="/tags/Spark-Scala-Streaming/">Spark Scala Streaming<span>1</span></a></li>
 		
-			<li><a href="/tags/Python/">Python<span>1</span></a></li>
+			<li><a href="/tags/Spark-DataFrameLikeSQL/">Spark DataFrameLikeSQL<span>1</span></a></li>
+		
+			<li><a href="/tags/Spark/">Spark<span>4</span></a></li>
+		
+			<li><a href="/tags/Scala/">Scala<span>3</span></a></li>
 		
 		 
 		</ul>
@@ -422,6 +422,10 @@ DataFrames facilitate practical ML Pipelines, particularly feature transformatio
 <div class="widget">
   <h4>Recent Posts</h4>
   <ul class="entry list-unstyled">
+    
+      <li>
+        <a href="/2016/12/09/SparkDataFrameLikeSql/" ><i class="fa fa-file-o"></i>SparkDataFrameLikeSql</a>
+      </li>
     
       <li>
         <a href="/2016/12/05/save-spark-rdd-into-Mysql/" ><i class="fa fa-file-o"></i>save spark rdd into Mysql</a>
@@ -437,10 +441,6 @@ DataFrames facilitate practical ML Pipelines, particularly feature transformatio
     
       <li>
         <a href="/2016/11/09/Install-Caffe-on-CentOS/" ><i class="fa fa-file-o"></i>Install Caffe on CentOS</a>
-      </li>
-    
-      <li>
-        <a href="/2016/08/22/Spark-Window-Operation/" ><i class="fa fa-file-o"></i>Spark Window Operation </a>
       </li>
     
   </ul>
