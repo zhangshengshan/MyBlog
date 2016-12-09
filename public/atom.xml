@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zhangshengshan.github.io/"/>
-  <updated>2016-12-09T08:20:34.000Z</updated>
+  <updated>2016-12-09T08:29:36.000Z</updated>
   <id>http://zhangshengshan.github.io/</id>
   
   <author>
@@ -20,9 +20,12 @@
     <link href="http://zhangshengshan.github.io/2016/12/09/SparkDataFrameLikeSql/"/>
     <id>http://zhangshengshan.github.io/2016/12/09/SparkDataFrameLikeSql/</id>
     <published>2016-12-09T08:11:00.000Z</published>
-    <updated>2016-12-09T08:20:34.000Z</updated>
+    <updated>2016-12-09T08:29:36.000Z</updated>
     
     <content type="html">&lt;p&gt;The idea of spark Datafame is inspired from dataframe of pandas which is a package of python for computing. On my opinion, dataframe can by prefered by the people who is familiar with SQL or BI developers, for it is easy to learn.&lt;/p&gt;
+&lt;p&gt;DataFrame could by registered as a table ,then Somebody could explore the the data by using Standard SQL.&lt;/p&gt;
+&lt;p&gt;However this article will focus on  some dataframe processing method without the help of registering a virtual table, and compared to those common operations in SQL including  SELECT, WHERE, GROUPBY, MIN, MAX, COUNT, SUM ,DISTINCT, ORDERBY, TOP, JOIN and so on&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;select * from person;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 </content>
     
     <summary type="html">
