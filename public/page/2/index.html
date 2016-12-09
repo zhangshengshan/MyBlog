@@ -117,6 +117,162 @@ var _hmt = _hmt || [];
 	
 	<!-- display as entry -->	
 		<h3 class="title">
+			<div class="date"> 2016-07-19 </div>
+			<div class="article-title"><a href="/2016/07/19/Scala-call-by-name-call-by-value/" >Scala call-by-name call-by-value</a></div>						
+		</h3>
+	
+
+
+			<div class="entry">
+  <div class="row">
+	
+	
+		<p>Call-by-value has the advantage that it avoids repeated evaluation of arguments.<br>Call-by-name has the advantage that it avoids evaluation of arguments when the<br>parameter is not used at all by the function. Call-by-value is usually more efficient<br>than call-by-name, but a call-by-value evaluation might loop where a call-by-name<br>evaluation would terminate. Consider:</p>
+<p>Call-by-value 的优势在于避免不断的计算参数。而call-by-name的优势在于如果一个函数根本就不会用到的参数，那么也不会被计算，与call-by-value恰好相反。下面的例子展示了一个Call-by-value会不停循环但是Call-by-name会停止的例子。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">scala&gt; def loop: Int = loop</span><br><span class="line">loop: Int</span><br><span class="line">scala&gt; def first(x: Int, y: Int) = x</span><br><span class="line">first: (Int,Int)Int</span><br></pre></td></tr></table></figure>
+<p>Then first(1, loop) reduces with call-by-name to 1, whereas the same term reduces with call-by-value repeatedly to itself, hence evaluation does not terminate.<br>first(1, loop)<br>→ first(1, loop)<br>→ first(1, loop)<br>→ …<br>上面的例子，之所以不停的循环的原因就是,y 被声明为 Call-by-value，因而，按照上面的说法，无论是否这个参数会被用到，该参数都会被计算，所以会不停的循环。</p>
+<p>Scala uses call-by-value by default, but it switches to call-by-name evaluation if the<br>parameter type is preceded by =&gt;.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">scala&gt; def constOne(x: Int, y: =&gt; Int) = 1</span><br><span class="line">constOne: (Int,=&gt; Int)Int</span><br><span class="line">scala&gt; constOne(1, loop)</span><br><span class="line">unnamed0: Int = 1</span><br><span class="line">scala&gt; constOne(loop, 2) // gives an infinite loop.</span><br></pre></td></tr></table></figure></p>
+<p>constOne(1,loop) 会停止，y被声明为Call-by-name, 所以当没有用到这个参数的时候,则不会被计算，因此不会陷入无限循环。<br>constOne(loop,2) 则恰好相反。</p>
+<p>本文示例 来自于  《ScalaByExample》,感谢原作者。</p>
+
+	
+	</div>
+  <a type="button" href="/2016/07/19/Scala-call-by-name-call-by-value/#more" class="btn btn-default more">Read More</a>
+</div>
+
+		
+			
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2016-07-13 </div>
+			<div class="article-title"><a href="/2016/07/13/机器学习相关材料/" >机器学习相关材料</a></div>						
+		</h3>
+	
+
+
+			<div class="entry">
+  <div class="row">
+	
+	
+		<p>1、数学基础</p>
+<ul>
+<li>1、微积分 <a href="http://v.163.com/special/sp/singlevariablecalculus.html" target="_blank" rel="external">http://v.163.com/special/sp/singlevariablecalculus.html</a>  <a href="http://open.163.com/special/opencourse/multivariable.html" target="_blank" rel="external">http://open.163.com/special/opencourse/multivariable.html</a></li>
+<li>2、线性代数 <a href="http://open.163.com/special/opencourse/daishu.html" target="_blank" rel="external">http://open.163.com/special/opencourse/daishu.html</a></li>
+<li>3、概率统计<a href="http://open.163.com/special/Khan/probability.html" target="_blank" rel="external">http://open.163.com/special/Khan/probability.html</a><br>想要深入学习机器学习，需要具有扎实的数学基础（矩阵分析和概率统计是基础的理论）</li>
+</ul>
+<p>2、进阶版本数学基础课程</p>
+<ul>
+<li>1、最优化理论（重点凸优化理论）  <a href="http://stanford.edu/~boyd/cvxbook/" target="_blank" rel="external">http://stanford.edu/~boyd/cvxbook/</a>   <a href="http://xiaoyc.com/duality-theory-for-optimization/#1-1-lagrangian" target="_blank" rel="external">http://xiaoyc.com/duality-theory-for-optimization/#1-1-lagrangian</a></li>
+<li>2、时变函数与泛函分析 <a href="http://ocw.nctu.edu.tw/course_list.php?page=2&amp;bgid=1&amp;gid=1" target="_blank" rel="external">http://ocw.nctu.edu.tw/course_list.php?page=2&amp;bgid=1&amp;gid=1</a>  <a href="http://open.163.com/special/opencourse/fanhanfenxi.html" target="_blank" rel="external">http://open.163.com/special/opencourse/fanhanfenxi.html</a></li>
+<li>3、随机过程 Hyperlink: Stochastic Process MIT View the complete course: Discrete Stochastic Processes</li>
+</ul>
+<p>3、机器学习基础课程</p>
+<ul>
+<li>1、Coursera上Andrew Ng Andrew Ng的《机器学习》</li>
+<li>2、林軒田(国立台湾大学) 機器學習基石</li>
+</ul>
+<p>4、机器学习基础课程</p>
+<ul>
+<li>1、 《统计学习方法》李航</li>
+<li>2、 《机器学习导论》</li>
+<li>3、 《PRML》</li>
+<li>4、 《图解机器学习》[日]杉山将</li>
+<li>5、   Machine Learning: A Probabilistic Prespective （Kevin Murphy）</li>
+<li>6、   Pattern Recognition and Machine Learning （Christopher Bishop）</li>
+<li>7、 《Spark机器学习》</li>
+<li>8、 《机器学习实战》</li>
+<li>9、 《贝叶斯思维:统计建模的Python学习法》</li>
+<li>10、Python自然语言处理》</li>
+<li>11、数学之美 （吴军）</li>
+<li>12、Web智能算法 （Haralambos Marmanis, Dmitry Babenko）</li>
+<li>13、集体智慧编程 （Toby Segaran）</li>
+<li>14、推荐系统实践</li>
+<li>15、计算广告学</li>
+</ul>
+<p>5、深度学习（注定将成为最近几年的爆发式增长）</p>
+<ul>
+<li>1、《Deep Learning》<a href="http://www.deeplearningbook.org" target="_blank" rel="external">http://www.deeplearningbook.org</a></li>
+<li>2、  CSDN Blog <a href="http://blog.csdn.net/zouxy09/article/details/8775360" target="_blank" rel="external">http://blog.csdn.net/zouxy09/article/details/8775360</a></li>
+<li>3、《斯坦福大学深度学习教程》<a href="http://ufldl.stanford.edu/tutorial" target="_blank" rel="external">http://ufldl.stanford.edu/tutorial</a></li>
+</ul>
+<p>6、 杂项</p>
+<ul>
+<li>《Choosing a Machine Learning Classifier》</li>
+<li>《An Introduction to Deep Learning: From Perceptrons to Deep Networks》 译文：《<a href="http://www.cnblogs.com/xiaowanyer/p/3701944.html》" target="_blank" rel="external">http://www.cnblogs.com/xiaowanyer/p/3701944.html》</a></li>
+<li>《The LION Way: Machine Learning plus Intelligent Optimization》</li>
+<li>《分布式并行处理的数据》</li>
+<li>《Deep Learning for Natural Language Processing and Related Applications》</li>
+<li>《Neural Networks and Deep Learning》</li>
+<li>《分布式机器学习的故事》</li>
+<li>《Deep Learning 101》</li>
+<li>《Deep learning from the bottom up》</li>
+<li>《Deep Learning（深度学习）学习笔记整理系列》</li>
+<li>《Google Turns To Deep Learning Classification To Fight Web Spam》</li>
+<li>《Deep Learning Sentiment Analysis for Movie Reviews using Neo4j》</li>
+<li>《EMNLP上两篇关于股票趋势的应用论文 》</li>
+<li>《Learning to Rank for Information Retrieval and Natural Language Processing》</li>
+<li>《Geoffrey E. Hinton》</li>
+<li>《Andrej Karpathy的深度强化学习演示》 论文在这里</li>
+<li>《用大数据和机器学习做股票价格预测》</li>
+<li>《机器学习经典算法详解及Python实现–基于SMO的SVM分类器》</li>
+<li>《Use Google’s Word2Vec for movie reviews》</li>
+<li>《深度卷积神经网络下围棋》</li>
+<li>《机器学习经典算法详解及Python实现–线性回归（Linear Regression）算法》</li>
+<li>《Caffe》</li>
+<li>《GoogLeNet深度学习模型的Caffe复现 》 GoogleNet论文</li>
+<li>《Deep Learning实战之word2vec》</li>
+<li>《A Deep Dive into Recurrent Neural Nets》</li>
+<li>《Geoffrey E. Hinton个人主页》</li>
+<li>《Deep Learning on Hadoop 2.0》</li>
+<li>《美团推荐算法实践》</li>
+<li>《The Trouble with SVMs》</li>
+<li>《Gaussian Processes for Machine Learning》</li>
+<li>《Introduction to ARMA Time Series Models – simplified》</li>
+<li>《Neural Net in C++ Tutorial》</li>
+<li>《Deep Learning Tutorials》</li>
+<li>《Deep Learning, The Curse of Dimensionality, and Autoencoders》</li>
+<li>《Topic modeling with LDA: MLlib meets GraphX》</li>
+<li>《Deep Learning for Multi-label Classification》</li>
+<li>《Google DeepMind publications》  AlphaGo团队官方论文</li>
+<li>《AM207: Monte Carlo Methods, Stochastic Optimization》</li>
+<li>《Back-to-Basics Weekend Reading - Machine Learning》</li>
+<li>《A Probabilistic Theory of Deep Learning》</li>
+<li>《How does Quora use machine learning in 2015?》</li>
+<li>《Parallel Machine Learning with scikit-learn and IPython》</li>
+<li>《Time Series Econometrics - A Concise Course》</li>
+<li>《A comparison of open source tools for sentiment analysis》</li>
+<li>《International Joint Conference on Artificial Intelligence Accepted paper》</li>
+<li>《How to Evaluate Machine Learning Models, Part 1: Orientation》 How to Evaluate Machine Learning Models, Part 2a: Classification Metrics,How to Evaluate Machine Learning Models, Part 2b: Ranking and Regression Metrics.</li>
+<li>《Learning scikit-learn: Machine Learning in Python》</li>
+<li>《Lightning fast Machine Learning with Spark》</li>
+<li>《How we’re using machine learning to fight shell selling》</li>
+<li>《Mining of Massive Datasets》</li>
+<li>《Advances in Extreme Learning Machines》</li>
+<li>《The Curse of Dimensionality in classification》</li>
+<li>《Demistifying LSTM Neural Networks》</li>
+<li>《Decoding Dimensionality Reduction, PCA and SVD》</li>
+<li>《What are the advantages of different classification algorithms?》</li>
+<li>《Kaggle R Tutorial on Machine Learning》 《Interactive R Tutorial: Machine Learning for the Titanic Competition》.</li>
+<li>《Logistic Regression and Gradient Descent》</li>
+<li>《Stock Forecasting With Machine Learning - Seven Possible Errors》</li>
+<li>《LR原理解析》  <a href="http://www.cnblogs.com/xiaowanyer/p/3701944.html" target="_blank" rel="external">http://www.cnblogs.com/xiaowanyer/p/3701944.html</a></li>
+<li>机器学习顶级会议和杂志 <a href="http://icml.cc/2015/?page_id=175" target="_blank" rel="external">http://icml.cc/2015/?page_id=175</a></li>
+<li>贝耶斯回归材料 <a href="http://blog.csdn.net/haoni123321/article/details/37913795" target="_blank" rel="external">http://blog.csdn.net/haoni123321/article/details/37913795</a></li>
+<li>贝耶斯回归材料 <a href="http://mindhacks.cn/2008/09/21/the-magical-bayesian-method/" target="_blank" rel="external">http://mindhacks.cn/2008/09/21/the-magical-bayesian-method/</a> </li>
+<li>AlphaGo原理解析<a href="https://www.youtube.com/watch?v=63FDxJ5e_Ew" target="_blank" rel="external">https://www.youtube.com/watch?v=63FDxJ5e_Ew</a></li>
+</ul>
+
+	
+	</div>
+  <a type="button" href="/2016/07/13/机器学习相关材料/#more" class="btn btn-default more">Read More</a>
+</div>
+
+		
+			
+	
+	<!-- display as entry -->	
+		<h3 class="title">
 			<div class="date"> 2016-07-13 </div>
 			<div class="article-title"><a href="/2016/07/13/过拟合的原因/" >过拟合的原因</a></div>						
 		</h3>
@@ -234,9 +390,11 @@ var _hmt = _hmt || [];
 		<h4>Tag Cloud</h4>
 		<ul class="tag_box inline list-unstyled">		
 		
-			<li><a href="/tags/Python/">Python<span>1</span></a></li>
+			<li><a href="/tags/Spark-Scala-Streaming/">Spark Scala Streaming<span>1</span></a></li>
 		
 			<li><a href="/tags/Spark/">Spark<span>4</span></a></li>
+		
+			<li><a href="/tags/Python/">Python<span>1</span></a></li>
 		
 			<li><a href="/tags/Scala/">Scala<span>3</span></a></li>
 		
@@ -252,6 +410,14 @@ var _hmt = _hmt || [];
   <ul class="entry list-unstyled">
     
       <li>
+        <a href="/2016/12/05/save-spark-rdd-into-Mysql/" ><i class="fa fa-file-o"></i>save spark rdd into Mysql</a>
+      </li>
+    
+      <li>
+        <a href="/2016/11/28/SparkStreamLearning/" ><i class="fa fa-file-o"></i>SparkStreamLearning</a>
+      </li>
+    
+      <li>
         <a href="/2016/11/10/MAC访问你DOCKER容器中的WEB页面/" ><i class="fa fa-file-o"></i>MAC访问你DOCKER容器中的WEB页面</a>
       </li>
     
@@ -261,14 +427,6 @@ var _hmt = _hmt || [];
     
       <li>
         <a href="/2016/08/22/Spark-Window-Operation/" ><i class="fa fa-file-o"></i>Spark Window Operation </a>
-      </li>
-    
-      <li>
-        <a href="/2016/08/19/Spark-2-0-Introduction/" ><i class="fa fa-file-o"></i>Spark 2.0 Introduction</a>
-      </li>
-    
-      <li>
-        <a href="/2016/08/19/Save-DataFrame-into-a-partitioned-table-of-HIVE/" ><i class="fa fa-file-o"></i>Save DataFrame into a parti...</a>
       </li>
     
   </ul>

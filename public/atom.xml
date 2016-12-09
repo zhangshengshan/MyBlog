@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zhangshengshan.github.io/"/>
-  <updated>2016-11-10T16:00:18.000Z</updated>
+  <updated>2016-12-09T05:12:24.000Z</updated>
   <id>http://zhangshengshan.github.io/</id>
   
   <author>
@@ -14,6 +14,48 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>save spark rdd into Mysql</title>
+    <link href="http://zhangshengshan.github.io/2016/12/05/save-spark-rdd-into-Mysql/"/>
+    <id>http://zhangshengshan.github.io/2016/12/05/save-spark-rdd-into-Mysql/</id>
+    <published>2016-12-05T14:12:19.000Z</published>
+    <updated>2016-12-09T05:12:24.000Z</updated>
+    
+    <content type="html">&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;import java.util.Properties&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;val target_df = targetRdd.toDF()&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;val prop = new Properties()&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;prop.put(&amp;quot;user&amp;quot;, &amp;quot;username&amp;quot;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;prop.put(&amp;quot;password&amp;quot;, &amp;quot;password&amp;quot;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;ret_df.write.mode(&amp;quot;append&amp;quot;).jdbc(&amp;quot;jdbc:mysql://host:port/database&amp;quot;,&amp;quot;table&amp;quot;,prop)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>SparkStreamLearning</title>
+    <link href="http://zhangshengshan.github.io/2016/11/28/SparkStreamLearning/"/>
+    <id>http://zhangshengshan.github.io/2016/11/28/SparkStreamLearning/</id>
+    <published>2016-11-28T05:16:15.000Z</published>
+    <updated>2016-11-28T05:37:32.000Z</updated>
+    
+    <content type="html">&lt;h1 id=&quot;input-source&quot;&gt;&lt;a href=&quot;#input-source&quot; class=&quot;headerlink&quot; title=&quot;input source&quot;&gt;&lt;/a&gt;input source&lt;/h1&gt;&lt;p&gt;kafka&lt;br&gt;akka&lt;/p&gt;
+&lt;h1 id=&quot;output&quot;&gt;&lt;a href=&quot;#output&quot; class=&quot;headerlink&quot; title=&quot;output&quot;&gt;&lt;/a&gt;output&lt;/h1&gt;&lt;p&gt;redis&lt;br&gt;kafka&lt;br&gt;elasticSearch&lt;br&gt;hive&lt;br&gt;mySql&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;input-source&quot;&gt;&lt;a href=&quot;#input-source&quot; class=&quot;headerlink&quot; title=&quot;input source&quot;&gt;&lt;/a&gt;input source&lt;/h1&gt;&lt;p&gt;kafka&lt;br&gt;akka&lt;/p&gt;
+&lt;h1 id=&quot;outp
+    
+    </summary>
+    
+    
+      <category term="Spark Scala Streaming" scheme="http://zhangshengshan.github.io/tags/Spark-Scala-Streaming/"/>
+    
+  </entry>
   
   <entry>
     <title>MAC访问你DOCKER容器中的WEB页面</title>
