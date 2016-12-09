@@ -44,7 +44,8 @@
 </tr>
 </tbody>
 </table>
-<h1 id="17年要学习的技能"><a href="#17年要学习的技能" class="headerlink" title="17年要学习的技能"></a>17年要学习的技能</h1><h2 id="机器学习方向"><a href="#机器学习方向" class="headerlink" title="机器学习方向"></a>机器学习方向</h2><ul>
+<h1 id="17年要学习的技能"><a href="#17年要学习的技能" class="headerlink" title="17年要学习的技能"></a>17年要学习的技能</h1><p>机器学习方向</p>
+<ul>
 <li>DecisionTree</li>
 <li>XgBoost</li>
 <li>SVM </li>
@@ -52,23 +53,28 @@
 <li>PCA</li>
 <li>LogisticRegresion</li>
 </ul>
-<h2 id="Scala"><a href="#Scala" class="headerlink" title="Scala"></a>Scala</h2><ul>
+<p>Scala</p>
+<ul>
 <li>Akka</li>
 <li>Actor</li>
 </ul>
-<h2 id="JAVA"><a href="#JAVA" class="headerlink" title="JAVA"></a>JAVA</h2><ul>
+<p>JAVA</p>
+<ul>
 <li>Spring SpringMVC MyBatis</li>
 <li>SpringBoot</li>
 </ul>
-<h2 id="Golang"><a href="#Golang" class="headerlink" title="Golang"></a>Golang</h2><ul>
+<p>Golang</p>
+<ul>
 <li>Beego</li>
 <li>channel基础</li>
 </ul>
-<h2 id="数学基础"><a href="#数学基础" class="headerlink" title="数学基础"></a>数学基础</h2><ul>
+<p>数学基础</p>
+<ul>
 <li>线性代数</li>
 <li>概率论</li>
 </ul>
-<h2 id="Spark"><a href="#Spark" class="headerlink" title="Spark"></a>Spark</h2><ul>
+<p>Spark</p>
+<ul>
 <li>Spark mlib</li>
 <li>streaming(redis/kafka/akka/hbase)</li>
 <li>structure streaming</li>
