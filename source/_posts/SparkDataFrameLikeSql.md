@@ -12,8 +12,23 @@ DataFrame could by registered as a table ,then Somebody could explore the the da
 However this article will focus on  some dataframe processing method without the help of registering a virtual table, and compared to those common operations in SQL including  SELECT, WHERE, GROUPBY, MIN, MAX, COUNT, SUM ,DISTINCT, ORDERBY, TOP, JOIN and so on
 
 
+here we make a DataFrame object a by reading a json file
 ```
-    select * from person;
+val a = sqlContext.read.json("people.json")
+```
+
+let us image a as a Table which is stored in a RDS database such as MySQL.
+```
+desc yourtable;
+```
+
+```
+    scala> a.printSchema
+    root
+    |-- age: long (nullable = true)
+    |-- depart: string (nullable = true)
+    |-- name: string (nullable = true)
+    |-- salary: long (nullable = true)
+```
 
 
-```
