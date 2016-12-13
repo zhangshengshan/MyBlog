@@ -65,10 +65,10 @@ a.select("name", "age").where($"age"===23).show
 a.select("name", "age").filter($"age"===23).show
 ```
 
-## MIN,MAX,SUM
+## MIN,MAX,SUM,COUNT
 
 ```
-select min(age), max(age), sum(salary) from people
+select min(age), max(age), sum(salary), count(age) from people
 ```
 
 
@@ -86,5 +86,45 @@ and the result is
 
 ```
 
+## COUNT DISTINCT
 
+```
+select count (distinct age) , count ( distinct name ) from people
+```
+
+```
+a.agg(countDistinct("age"), countDistinct("name")).show
+```
+and the result is 
+```
++-------------------+--------------------+
+|count(DISTINCT age)|count(DISTINCT name)|
++-------------------+--------------------+
+|                  3|                   7|
++-------------------+--------------------+
+```
+
+
+## ORDERBY desc
+```
+select * from people orderby age desc, name desc
+
+```
+
+```
+a.sort($"age".desc,$"name".desc).show
+```
+```
++---+------+-------+------+
+|age|depart|   name|salary|
++---+------+-------+------+
+| 30|     B|   Andy|  4000|
+| 23|     A|Michael|  3000|
+| 23|     A|    Dan|  3500|
+| 23|     A|    Ben|  3700|
+| 23|     A|   Alex|  3600|
+| 19|     A| Justin|  5000|
+| 19|     B|   Jack|  2000|
++---+------+-------+------+
+```
 
