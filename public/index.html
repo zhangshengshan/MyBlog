@@ -212,6 +212,43 @@ var _hmt = _hmt || [];
 	
 	<!-- display as entry -->	
 		<h3 class="title">
+			<div class="date"> 2016-12-09 </div>
+			<div class="article-title"><a href="/2016/12/09/SparkDataFrameLikeSql/" >SparkDataFrameLikeSql</a></div>						
+		</h3>
+	
+
+
+			<div class="entry">
+  <div class="row">
+	
+	
+		<p>The idea of spark Datafame is inspired from dataframe of pandas which is a package of python for computing. On my opinion, dataframe can by prefered by the people who is familiar with SQL or BI developers, for it is easy to learn.</p>
+<p>DataFrame could by registered as a table ,then Somebody could explore the the data by using Standard SQL.</p>
+<p>However this article will focus on  some dataframe processing method without the help of registering a virtual table, and compared to those common operations in SQL including  SELECT, WHERE, GROUPBY, MIN, MAX, COUNT, SUM ,DISTINCT, ORDERBY, TOP, JOIN and so on</p>
+<p>here we make a DataFrame object a by reading a json file<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">val sc: SparkContext // An existing SparkContext.</span><br><span class="line">val sqlContext = new org.apache.spark.sql.SQLContext(sc)</span><br><span class="line">// this is used to implicitly convert an RDD to a DataFrame.</span><br><span class="line">import sqlContext.implicits._</span><br><span class="line">val a = sqlContext.read.json(&quot;people.json&quot;)</span><br></pre></td></tr></table></figure></p>
+<p>and the content of people.json is as below<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;&quot;name&quot;:&quot;Michael&quot; , &quot;age&quot;:23 ,&quot;depart&quot;:&quot;A&quot;,&quot;salary&quot;:3000 &#125;</span><br><span class="line">&#123;&quot;name&quot;:&quot;Dan&quot;     , &quot;age&quot;:23 ,&quot;depart&quot;:&quot;A&quot;,&quot;salary&quot;:3500 &#125;</span><br><span class="line">&#123;&quot;name&quot;:&quot;Alex&quot;    , &quot;age&quot;:23 ,&quot;depart&quot;:&quot;A&quot;,&quot;salary&quot;:3600 &#125;</span><br><span class="line">&#123;&quot;name&quot;:&quot;Ben&quot;     , &quot;age&quot;:23 ,&quot;depart&quot;:&quot;A&quot;,&quot;salary&quot;:3700 &#125;</span><br><span class="line">&#123;&quot;name&quot;:&quot;Andy&quot;    , &quot;age&quot;:30 ,&quot;depart&quot;:&quot;B&quot;,&quot;salary&quot;:4000 &#125;</span><br><span class="line">&#123;&quot;name&quot;:&quot;Justin&quot;  , &quot;age&quot;:19 ,&quot;depart&quot;:&quot;A&quot;,&quot;salary&quot;:5000 &#125;</span><br><span class="line">&#123;&quot;name&quot;:&quot;Jack&quot;    , &quot;age&quot;:19 ,&quot;depart&quot;:&quot;B&quot;,&quot;salary&quot;:2000 &#125;</span><br></pre></td></tr></table></figure></p>
+<p>let us image a as a Table which is stored in a RDS database such as MySQL.</p>
+<h2 id="desc"><a href="#desc" class="headerlink" title="desc"></a>desc</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">desc people;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">scala&gt; a.printSchema</span><br><span class="line">root</span><br><span class="line">|-- age: long (nullable = true)</span><br><span class="line">|-- depart: string (nullable = true)</span><br><span class="line">|-- name: string (nullable = true)</span><br><span class="line">|-- salary: long (nullable = true)</span><br></pre></td></tr></table></figure>
+<h2 id="SELECT"><a href="#SELECT" class="headerlink" title="SELECT"></a>SELECT</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select name from people;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a.select(&lt;font color=red&gt;&quot;name&quot;&lt;/font&gt;).show</span><br><span class="line">a.select(&lt;font color=red&gt;$&quot;name&quot;&lt;/font&gt;).show</span><br><span class="line">a.select(&lt;font color=red&gt;a(&quot;name&quot;)&lt;/font&gt;).show</span><br></pre></td></tr></table></figure>
+<p>the three methods above are equivelent.</p>
+<h2 id="WHERE"><a href="#WHERE" class="headerlink" title="WHERE"></a>WHERE</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select name,age from people where age = 23</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a.select(&quot;name&quot;, &quot;age&quot;).&lt;font color=red&gt;where&lt;/font&gt;($&quot;age&quot;===23).show</span><br><span class="line">a.select(&quot;name&quot;, &quot;age&quot;).&lt;font color=red&gt;filter&lt;/font&gt;($&quot;age&quot;===23).show</span><br></pre></td></tr></table></figure>
+<h2 id="MIN-MAX-SUM"><a href="#MIN-MAX-SUM" class="headerlink" title="MIN,MAX,SUM"></a>MIN,MAX,SUM</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select min(age), max(age), sum(salary) from people</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a.select(&lt;font color=red&gt;min&lt;/font&gt;(&quot;age&quot;),&lt;font color=red&gt;max&lt;/font&gt;(&quot;age&quot;),&lt;font color=red&gt;sum&lt;/font&gt;(&quot;salary&quot;),&lt;font color=red&gt;count&lt;/font&gt;(&quot;age&quot;)).show</span><br></pre></td></tr></table></figure>
+<p>and the result is<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">+--------+--------+-----------+----------+</span><br><span class="line">|min(age)|max(age)|sum(salary)|count(age)|</span><br><span class="line">+--------+--------+-----------+----------+</span><br><span class="line">|      19|      30|      24800|         7|</span><br><span class="line">+--------+--------+-----------+----------+</span><br></pre></td></tr></table></figure></p>
+
+	
+	</div>
+  <a type="button" href="/2016/12/09/SparkDataFrameLikeSql/#more" class="btn btn-default more">Read More</a>
+</div>
+
+		
+			
+	
+	<!-- display as entry -->	
+		<h3 class="title">
 			<div class="date"> 2016-12-05 </div>
 			<div class="article-title"><a href="/2016/12/05/save-spark-rdd-into-Mysql/" >save spark rdd into Mysql</a></div>						
 		</h3>
@@ -399,32 +436,6 @@ DataFrames facilitate practical ML Pipelines, particularly feature transformatio
 </div>
 
 		
-			
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2016-07-26 </div>
-			<div class="article-title"><a href="/2016/07/26/MergeSort/" >MergeSort</a></div>						
-		</h3>
-	
-
-
-			<div class="entry">
-  <div class="row">
-	
-	
-		<p>归并排序</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">def msort[A](less: (A, A) =&gt; Boolean)(xs: List[A]): List[A] = &#123; </span><br><span class="line">    def merge(xs1: List[A], xs2: List[A]): List[A] =</span><br><span class="line">        if (xs1.isEmpty) xs2</span><br><span class="line">        else if (xs2.isEmpty) xs1</span><br><span class="line">        else if (less(xs1.head, xs2.head)) xs1.head :: merge(xs1.tail, xs2) else xs2.head :: merge(xs1, xs2.tail)</span><br><span class="line">    val n = xs.length/2</span><br><span class="line">    if (n == 0) xs</span><br><span class="line">    else merge(msort(less)(xs take n), msort(less)(xs drop n))</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>如果你对python列表的用法比较熟悉的话，可以按照如下的方式理解</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">xs take n   // xs[0:n+1]</span><br><span class="line">xs drop n   // xs[n+1:]</span><br></pre></td></tr></table></figure>
-<p>msort函数应该按照如下方式进行调用<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">msort((x: Int, y: Int) =&gt; x &lt; y)(List(5, 7, 1, 3))</span><br></pre></td></tr></table></figure></p>
-
-	
-	</div>
-  <a type="button" href="/2016/07/26/MergeSort/#more" class="btn btn-default more">Read More</a>
-</div>
-
-		
 
 		</div>
 
@@ -475,13 +486,15 @@ DataFrames facilitate practical ML Pipelines, particularly feature transformatio
 		<h4>Tag Cloud</h4>
 		<ul class="tag_box inline list-unstyled">		
 		
-			<li><a href="/tags/Spark-Scala-Streaming/">Spark Scala Streaming<span>1</span></a></li>
-		
-			<li><a href="/tags/Spark/">Spark<span>4</span></a></li>
+			<li><a href="/tags/Python/">Python<span>1</span></a></li>
 		
 			<li><a href="/tags/Scala/">Scala<span>3</span></a></li>
 		
-			<li><a href="/tags/Python/">Python<span>1</span></a></li>
+			<li><a href="/tags/Spark/">Spark<span>4</span></a></li>
+		
+			<li><a href="/tags/Spark-DataFrame/">Spark DataFrame<span>1</span></a></li>
+		
+			<li><a href="/tags/Spark-Scala-Streaming/">Spark Scala Streaming<span>1</span></a></li>
 		
 		 
 		</ul>
@@ -499,6 +512,10 @@ DataFrames facilitate practical ML Pipelines, particularly feature transformatio
       </li>
     
       <li>
+        <a href="/2016/12/09/SparkDataFrameLikeSql/" ><i class="fa fa-file-o"></i>SparkDataFrameLikeSql</a>
+      </li>
+    
+      <li>
         <a href="/2016/12/05/save-spark-rdd-into-Mysql/" ><i class="fa fa-file-o"></i>save spark rdd into Mysql</a>
       </li>
     
@@ -508,10 +525,6 @@ DataFrames facilitate practical ML Pipelines, particularly feature transformatio
     
       <li>
         <a href="/2016/11/10/MAC访问你DOCKER容器中的WEB页面/" ><i class="fa fa-file-o"></i>MAC访问你DOCKER容器中的WEB页面</a>
-      </li>
-    
-      <li>
-        <a href="/2016/11/09/Install-Caffe-on-CentOS/" ><i class="fa fa-file-o"></i>Install Caffe on CentOS</a>
       </li>
     
   </ul>
