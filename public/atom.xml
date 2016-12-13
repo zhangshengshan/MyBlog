@@ -114,33 +114,6 @@
   </entry>
   
   <entry>
-    <title>SparkDataFrameLikeSql</title>
-    <link href="http://zhangshengshan.github.io/2016/12/09/SparkDataFrameLikeSql/"/>
-    <id>http://zhangshengshan.github.io/2016/12/09/SparkDataFrameLikeSql/</id>
-    <published>2016-12-09T08:11:00.000Z</published>
-    <updated>2016-12-13T05:09:02.000Z</updated>
-    
-    <content type="html">&lt;p&gt;The idea of spark Datafame is inspired from dataframe of pandas which is a package of python for computing. On my opinion, dataframe can by prefered by the people who is familiar with SQL or BI developers, for it is easy to learn.&lt;/p&gt;
-&lt;p&gt;DataFrame could by registered as a table ,then Somebody could explore the the data by using Standard SQL.&lt;/p&gt;
-&lt;p&gt;However this article will focus on  some dataframe processing method without the help of registering a virtual table, and compared to those common operations in SQL including  SELECT, WHERE, GROUPBY, MIN, MAX, COUNT, SUM ,DISTINCT, ORDERBY, TOP, JOIN and so on&lt;/p&gt;
-&lt;p&gt;here we make a DataFrame object a by reading a json file&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;val a = sqlContext.read.json(&amp;quot;people.json&amp;quot;)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;and the content of people.json is as below&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;&amp;quot;name&amp;quot;:&amp;quot;Michael&amp;quot; , &amp;quot;age&amp;quot;:23 ,&amp;quot;depart&amp;quot;:&amp;quot;A&amp;quot;,&amp;quot;salary&amp;quot;:3000 &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;&amp;quot;name&amp;quot;:&amp;quot;Dan&amp;quot;     , &amp;quot;age&amp;quot;:23 ,&amp;quot;depart&amp;quot;:&amp;quot;A&amp;quot;,&amp;quot;salary&amp;quot;:3500 &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;&amp;quot;name&amp;quot;:&amp;quot;Alex&amp;quot;    , &amp;quot;age&amp;quot;:23 ,&amp;quot;depart&amp;quot;:&amp;quot;A&amp;quot;,&amp;quot;salary&amp;quot;:3600 &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;&amp;quot;name&amp;quot;:&amp;quot;Ben&amp;quot;     , &amp;quot;age&amp;quot;:23 ,&amp;quot;depart&amp;quot;:&amp;quot;A&amp;quot;,&amp;quot;salary&amp;quot;:3700 &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;&amp;quot;name&amp;quot;:&amp;quot;Andy&amp;quot;    , &amp;quot;age&amp;quot;:30 ,&amp;quot;depart&amp;quot;:&amp;quot;B&amp;quot;,&amp;quot;salary&amp;quot;:4000 &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;&amp;quot;name&amp;quot;:&amp;quot;Justin&amp;quot;  , &amp;quot;age&amp;quot;:19 ,&amp;quot;depart&amp;quot;:&amp;quot;A&amp;quot;,&amp;quot;salary&amp;quot;:5000 &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;&amp;quot;name&amp;quot;:&amp;quot;Jack&amp;quot;    , &amp;quot;age&amp;quot;:19 ,&amp;quot;depart&amp;quot;:&amp;quot;B&amp;quot;,&amp;quot;salary&amp;quot;:2000 &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;let us image a as a Table which is stored in a RDS database such as MySQL.&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;desc yourtable;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;scala&amp;gt; a.printSchema&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;root&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;|-- age: long (nullable = true)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;|-- depart: string (nullable = true)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;|-- name: string (nullable = true)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;|-- salary: long (nullable = true)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;The idea of spark Datafame is inspired from dataframe of pandas which is a package of python for computing. On my opinion, dataframe can 
-    
-    </summary>
-    
-    
-      <category term="Spark DataFrame" scheme="http://zhangshengshan.github.io/tags/Spark-DataFrame/"/>
-    
-  </entry>
-  
-  <entry>
     <title>save spark rdd into Mysql</title>
     <link href="http://zhangshengshan.github.io/2016/12/05/save-spark-rdd-into-Mysql/"/>
     <id>http://zhangshengshan.github.io/2016/12/05/save-spark-rdd-into-Mysql/</id>

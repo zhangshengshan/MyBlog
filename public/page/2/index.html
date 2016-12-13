@@ -118,32 +118,6 @@ var _hmt = _hmt || [];
 	<!-- display as entry -->	
 		<h3 class="title">
 			<div class="date"> 2016-07-26 </div>
-			<div class="article-title"><a href="/2016/07/26/MergeSort/" >MergeSort</a></div>						
-		</h3>
-	
-
-
-			<div class="entry">
-  <div class="row">
-	
-	
-		<p>归并排序</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">def msort[A](less: (A, A) =&gt; Boolean)(xs: List[A]): List[A] = &#123; </span><br><span class="line">    def merge(xs1: List[A], xs2: List[A]): List[A] =</span><br><span class="line">        if (xs1.isEmpty) xs2</span><br><span class="line">        else if (xs2.isEmpty) xs1</span><br><span class="line">        else if (less(xs1.head, xs2.head)) xs1.head :: merge(xs1.tail, xs2) else xs2.head :: merge(xs1, xs2.tail)</span><br><span class="line">    val n = xs.length/2</span><br><span class="line">    if (n == 0) xs</span><br><span class="line">    else merge(msort(less)(xs take n), msort(less)(xs drop n))</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>如果你对python列表的用法比较熟悉的话，可以按照如下的方式理解</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">xs take n   // xs[0:n+1]</span><br><span class="line">xs drop n   // xs[n+1:]</span><br></pre></td></tr></table></figure>
-<p>msort函数应该按照如下方式进行调用<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">msort((x: Int, y: Int) =&gt; x &lt; y)(List(5, 7, 1, 3))</span><br></pre></td></tr></table></figure></p>
-
-	
-	</div>
-  <a type="button" href="/2016/07/26/MergeSort/#more" class="btn btn-default more">Read More</a>
-</div>
-
-		
-			
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2016-07-26 </div>
 			<div class="article-title"><a href="/2016/07/26/ScalaList/" >ScalaList</a></div>						
 		</h3>
 	
@@ -440,15 +414,13 @@ var _hmt = _hmt || [];
 		<h4>Tag Cloud</h4>
 		<ul class="tag_box inline list-unstyled">		
 		
-			<li><a href="/tags/Spark-DataFrame/">Spark DataFrame<span>1</span></a></li>
-		
 			<li><a href="/tags/Python/">Python<span>1</span></a></li>
-		
-			<li><a href="/tags/Spark-Scala-Streaming/">Spark Scala Streaming<span>1</span></a></li>
 		
 			<li><a href="/tags/Scala/">Scala<span>3</span></a></li>
 		
 			<li><a href="/tags/Spark/">Spark<span>4</span></a></li>
+		
+			<li><a href="/tags/Spark-Scala-Streaming/">Spark Scala Streaming<span>1</span></a></li>
 		
 		 
 		</ul>
@@ -466,10 +438,6 @@ var _hmt = _hmt || [];
       </li>
     
       <li>
-        <a href="/2016/12/09/SparkDataFrameLikeSql/" ><i class="fa fa-file-o"></i>SparkDataFrameLikeSql</a>
-      </li>
-    
-      <li>
         <a href="/2016/12/05/save-spark-rdd-into-Mysql/" ><i class="fa fa-file-o"></i>save spark rdd into Mysql</a>
       </li>
     
@@ -479,6 +447,10 @@ var _hmt = _hmt || [];
     
       <li>
         <a href="/2016/11/10/MAC访问你DOCKER容器中的WEB页面/" ><i class="fa fa-file-o"></i>MAC访问你DOCKER容器中的WEB页面</a>
+      </li>
+    
+      <li>
+        <a href="/2016/11/09/Install-Caffe-on-CentOS/" ><i class="fa fa-file-o"></i>Install Caffe on CentOS</a>
       </li>
     
   </ul>
