@@ -50,9 +50,9 @@ select name from people;
 ```
 
 ```
-a.select(<font color=red>"name"</font>).show
-a.select(<font color=red>$"name"</font>).show
-a.select(<font color=red>a("name")</font>).show
+a.select("name").show
+a.select($"name").show
+a.select(a("name")).show
 ```
 the three methods above are equivelent.
 
@@ -61,8 +61,8 @@ the three methods above are equivelent.
 select name,age from people where age = 23
 ```
 ```
-a.select("name", "age").<font color=red>where</font>($"age"===23).show
-a.select("name", "age").<font color=red>filter</font>($"age"===23).show
+a.select("name", "age").where($"age"===23).show
+a.select("name", "age").filter($"age"===23).show
 ```
 
 ## MIN,MAX,SUM
@@ -73,7 +73,7 @@ select min(age), max(age), sum(salary) from people
 
 
 ```
-a.select(<font color=red>min</font>("age"),<font color=red>max</font>("age"),<font color=red>sum</font>("salary"),<font color=red>count</font>("age")).show
+a.select(min("age"),max("age"),sum("salary"),count("age")).show
 ```
 and the result is 
 ```
