@@ -8,7 +8,7 @@ The idea of spark Datafame is inspired from dataframe of pandas which is a packa
 
 DataFrame could by registered as a table ,then Somebody could explore the the data by using Standard SQL.
 
-However this article will focus on  some dataframe processing method without the help of registering a virtual table, and compared to those common operations in SQL including  SELECT, WHERE, GROUPBY, MIN, MAX, COUNT, SUM ,DISTINCT, ORDERBY, TOP, JOIN and so on
+However this article will focus on  some dataframe processing method without the help of registering a virtual table, and compared to those common operations in SQL including  SELECT, WHERE, GROUPBY, MIN, MAX, COUNT, SUM ,DISTINCT, ORDERBY, DESC/ASC, JOIN and so on
 
 here we make a DataFrame object a by reading a json file
 ```
@@ -74,6 +74,7 @@ select min(age), max(age), sum(salary), count(age) from people
 
 ```
 a.select(min("age"),max("age"),sum("salary"),count("age")).show
+a.agg(min("age"),max("age"),sum("salary"),count("age")).show
 ```
 and the result is 
 ```
@@ -93,14 +94,15 @@ select count (distinct age) , count ( distinct name ) from people
 ```
 
 ```
-a.agg(countDistinct("age"), countDistinct("name")).show
+a.select(count("age"),countDistinct("age")).show
+a.agg(count("age"), countDistinct("name")).show
 ```
 and the result is 
 ```
 +-------------------+--------------------+
 |count(DISTINCT age)|count(DISTINCT name)|
 +-------------------+--------------------+
-|                  3|                   7|
+|                  7|                   3|
 +-------------------+--------------------+
 ```
 
