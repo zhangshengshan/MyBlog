@@ -130,3 +130,80 @@ a.sort($"age".desc,$"name".desc).show
 +---+------+-------+------+
 ```
 
+
+## inner join, left outer join and convert null to a default value 
+first we make another dataframe based on a 
+```
+val c = a.filter(not ($"age"===23))
+
+scala> c.show
++---+------+------+------+
+|age|depart|  name|salary|
++---+------+------+------+
+| 30|     B|  Andy|  4000|
+| 19|     A|Justin|  5000|
+| 19|     B|  Jack|  2000|
++---+------+------+------+
+
+```
+now we try to join a and c 
+
+```
+    select 
+        a.age as a_age,
+        if(c.age is null, 0, c.age) as c_age,
+        a.depart as a_depart
+    from 
+        a
+    left outer join
+        c
+    on 
+        a.age = c.age
+```
+the cording dataframe form is 
+```
+
+scala> a.join(c,a("age")===c("age"),"left").select(a("age").alias("a_age"),c("age").alias("c_age"),a("depart").alias("a_depart")).na.fill(0,Seq("c_age")).show
++-----+-----+--------+
+|a_age|c_age|a_depart|
++-----+-----+--------+
+|   23|    0|       A|
+|   23|    0|       A|
+|   23|    0|       A|
+|   23|    0|       A|
+|   30|   30|       B|
+|   19|   19|       A|
+|   19|   19|       A|
+|   19|   19|       B|
+|   19|   19|       B|
++-----+-----+--------+
+
+```
+what if those records whose c.age is null is execluded 
+```
+select 
+    a.age as a_age,
+    if(c.age is null, 0, c.age) as c_age,
+    a.depart as a_depart
+from 
+    a
+left outer join
+    c
+on 
+    a.age = c.age
+where 
+    c.age is not null
+```
+the na.drop method provided this function
+```
+scala> a.join(c,a("age")===c("age"),"left").select(a("age").alias("a_age"),c("age").alias("c_age"),a("depart").alias("a_depart")).na.drop.show
++-----+-----+--------+
+|a_age|c_age|a_depart|
++-----+-----+--------+
+|   30|   30|       B|
+|   19|   19|       A|
+|   19|   19|       A|
+|   19|   19|       B|
+|   19|   19|       B|
++-----+-----+--------+
+```
