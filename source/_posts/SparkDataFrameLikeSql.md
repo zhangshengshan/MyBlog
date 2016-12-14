@@ -207,3 +207,35 @@ scala> a.join(c,a("age")===c("age"),"left").select(a("age").alias("a_age"),c("ag
 |   19|   19|       B|
 +-----+-----+--------+
 ```
+
+## Top N for group 
+use window operation can help 
+```
+import org.apache.spark.sql.expressions.Window
+val w = Window.partitionBy($"depart")
+import org.apache.spark.sql.expressions.Window
+val rankAsc = row_number().over(w.orderBy($"salary")).alias("rank_asc")
+val rankDesc = row_number().over(w.orderBy($"salary".desc)).alias("rank_desc")
+```
+
+```
+scala> a.select($"*", rankAsc, rankDesc).filter($"rank_asc"<3 || $"rank_desc" >= 2).show
++---+------+-------+------+--------+---------+
+|age|depart|   name|salary|rank_asc|rank_desc|
++---+------+-------+------+--------+---------+
+| 30|     B|   Andy|  4000|       2|        1|
+| 19|     B|   Jack|  2000|       1|        2|
+| 23|     A|    Ben|  3700|       4|        2|
+| 23|     A|   Alex|  3600|       3|        3|
+| 23|     A|    Dan|  3500|       2|        4|
+| 23|     A|Michael|  3000|       1|        5|
++---+------+-------+------+--------+---------+
+scala> a.select($"*", rankAsc, rankDesc).filter($"rank_asc"<3 && $"rank_desc" >= 2).show
++---+------+-------+------+--------+---------+
+|age|depart|   name|salary|rank_asc|rank_desc|
++---+------+-------+------+--------+---------+
+| 19|     B|   Jack|  2000|       1|        2|
+| 23|     A|    Dan|  3500|       2|        4|
+| 23|     A|Michael|  3000|       1|        5|
++---+------+-------+------+--------+---------+
+```
