@@ -239,3 +239,4 @@ scala> a.select($"*", rankAsc, rankDesc).filter($"rank_asc"<3 && $"rank_desc" >=
 | 23|     A|Michael|  3000|       1|        5|
 +---+------+-------+------+--------+---------+
 ```
+what's more, it is clearly select ```*``` in SQL could by implemented by ```select($"*")```
