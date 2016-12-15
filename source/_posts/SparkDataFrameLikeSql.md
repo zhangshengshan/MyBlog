@@ -4,11 +4,11 @@ date: 2016-12-09 16:11:00
 tags: Spark DataFrame
 ---
 
-The idea of spark Datafame is inspired from dataframe of pandas which is a package of python for computing. On my opinion, dataframe can by prefered by the people who is familiar with SQL or BI developers, for it is easy to learn.
+The idea of spark Datafame may be inspired from dataframe of pandas which is a package of python for structure data processing. On my opinion, dataframe can by prefered by the people with BI(business intelligence) background for high development efficiency.
 
-DataFrame could by registered as a table ,then Somebody could explore the the data by using Standard SQL.
+DataFrame in Spark could by registered as something which could be considered approximately as a virtual table, therefore anyone who has expierence of SQL could explore the data at quite a low cost of time.
 
-However this article will focus on  some dataframe processing method without the help of registering a virtual table, and compared to those common operations in SQL including  SELECT, WHERE, GROUPBY, MIN, MAX, COUNT, SUM ,DISTINCT, ORDERBY, DESC/ASC, JOIN and so on
+However this article will focus on some dataframe processing method without the help of registering a virtual table, and compared to those common operations in SQL including  SELECT, WHERE, GROUPBY, MIN, MAX, COUNT, SUM ,DISTINCT, ORDERBY, DESC/ASC, JOIN and so on
 
 here we make a DataFrame object a by reading a json file
 ```
