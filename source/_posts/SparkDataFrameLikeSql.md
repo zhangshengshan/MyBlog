@@ -3,14 +3,15 @@ title: SparkDataFrameLikeSql
 date: 2016-12-09 16:11:00
 tags: Spark DataFrame
 ---
-
 The idea of spark Datafame may be inspired from dataframe of pandas which is a package of python for structure data processing. On my opinion, dataframe can by prefered by the people with BI(business intelligence) background for high development efficiency.
 
 DataFrame in Spark could by registered as something which could be considered approximately as a virtual table, therefore anyone who has expierence of SQL could explore the data at quite a low cost of time.
 
-However this article will focus on some dataframe processing method without the help of registering a virtual table, and compared to those common operations in SQL including  SELECT, WHERE, GROUPBY, MIN, MAX, COUNT, SUM ,DISTINCT, ORDERBY, DESC/ASC, JOIN and so on
+This article will focus on some dataframe processing method without the help of registering a virtual table and executing SQL, however the corresponding SQL operations such as  SELECT, WHERE, GROUPBY, MIN, MAX, COUNT, SUM ,DISTINCT, ORDERBY, DESC/ASC, JOIN and GROUPBY TOP will by supplied for a better understanding of dataframe in spark.
 
-here we make a DataFrame object a by reading a json file
+## prepare test data
+
+Firstly we make a DataFrame object a by reading a json file
 ```
 val sc: SparkContext // An existing SparkContext.
 val sqlContext = new org.apache.spark.sql.SQLContext(sc)
