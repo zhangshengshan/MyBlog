@@ -117,6 +117,28 @@ var _hmt = _hmt || [];
 	
 	<!-- display as entry -->	
 		<h3 class="title">
+			<div class="date"> 2016-08-19 </div>
+			<div class="article-title"><a href="/2016/08/19/Save-DataFrame-into-a-partitioned-table-of-HIVE/" >Save DataFrame into a partitioned table of HIVE</a></div>						
+		</h3>
+	
+
+
+			<div class="entry">
+  <div class="row">
+	
+	
+		<h1 id="How-to-save-a-spark-DataFrame-as-a-patitioned-hive-table"><a href="#How-to-save-a-spark-DataFrame-as-a-patitioned-hive-table" class="headerlink" title="How to save a spark DataFrame as a patitioned hive table"></a>How to save a spark DataFrame as a patitioned hive table</h1><h2 id="utilise-saveAsTable-method"><a href="#utilise-saveAsTable-method" class="headerlink" title="utilise saveAsTable method"></a>utilise saveAsTable method</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">val conf = new SparkConf().setAppName(&quot;Simple Application&quot;).setMaster(&quot;local&quot;)</span><br><span class="line">val sc = new SparkContext(conf)</span><br><span class="line">val sqlContext = new org.apache.spark.sql.SQLContext(sc)</span><br><span class="line">import sqlContext.implicits._</span><br><span class="line">val hiveContext = new org.apache.spark.sql.hive.HiveContext(sc)</span><br><span class="line">hiveContext.sql(&quot;use database&quot;)</span><br><span class="line"></span><br><span class="line">val cmd =</span><br><span class="line">  &quot;&quot;&quot;</span><br><span class="line">     select</span><br><span class="line">      col1,</span><br><span class="line">      col2</span><br><span class="line">     from</span><br><span class="line">      table</span><br><span class="line">  &quot;&quot;&quot;.stripMargin</span><br><span class="line">val yourDf = hiveContext.sql(cmd)</span><br><span class="line">yourDf.printSchema()</span><br><span class="line">yourDf.write.partitionBy(&quot;col2&quot;).saveAsTable(&quot;partitionTableName&quot;)</span><br></pre></td></tr></table></figure>
+
+	
+	</div>
+  <a type="button" href="/2016/08/19/Save-DataFrame-into-a-partitioned-table-of-HIVE/#more" class="btn btn-default more">Read More</a>
+</div>
+
+		
+			
+	
+	<!-- display as entry -->	
+		<h3 class="title">
 			<div class="date"> 2016-08-11 </div>
 			<div class="article-title"><a href="/2016/08/11/SparkPassFunctions/" >SparkPassFunctions</a></div>						
 		</h3>
@@ -462,17 +484,17 @@ var _hmt = _hmt || [];
 		<h4>Tag Cloud</h4>
 		<ul class="tag_box inline list-unstyled">		
 		
-			<li><a href="/tags/Scala/">Scala<span>3</span></a></li>
+			<li><a href="/tags/Spark-DataFrame/">Spark DataFrame<span>1</span></a></li>
 		
 			<li><a href="/tags/Spark-Streaming/">Spark Streaming<span>1</span></a></li>
 		
 			<li><a href="/tags/Spark/">Spark<span>4</span></a></li>
 		
-			<li><a href="/tags/Spark-Scala-Streaming/">Spark Scala Streaming<span>1</span></a></li>
-		
-			<li><a href="/tags/Spark-DataFrame/">Spark DataFrame<span>1</span></a></li>
-		
 			<li><a href="/tags/Python/">Python<span>1</span></a></li>
+		
+			<li><a href="/tags/Scala/">Scala<span>3</span></a></li>
+		
+			<li><a href="/tags/Spark-Scala-Streaming/">Spark Scala Streaming<span>1</span></a></li>
 		
 		 
 		</ul>
@@ -484,6 +506,10 @@ var _hmt = _hmt || [];
 <div class="widget">
   <h4>Recent Posts</h4>
   <ul class="entry list-unstyled">
+    
+      <li>
+        <a href="/2016/12/21/3-2UVa1586/" ><i class="fa fa-file-o"></i>3_2UVa1586</a>
+      </li>
     
       <li>
         <a href="/2016/12/15/Spark-Streaming-Programming-Guide/" ><i class="fa fa-file-o"></i>Spark Streaming Programming...</a>
@@ -499,10 +525,6 @@ var _hmt = _hmt || [];
     
       <li>
         <a href="/2016/12/05/save-spark-rdd-into-Mysql/" ><i class="fa fa-file-o"></i>save spark rdd into Mysql</a>
-      </li>
-    
-      <li>
-        <a href="/2016/11/28/SparkStreamLearning/" ><i class="fa fa-file-o"></i>SparkStreamLearning</a>
       </li>
     
   </ul>
