@@ -118,6 +118,50 @@ var _hmt = _hmt || [];
 	<!-- display as entry -->	
 		<h3 class="title">
 			<div class="date"> 2016-12-21 </div>
+			<div class="article-title"><a href="/2016/12/21/UVa455/" >UVa455</a></div>						
+		</h3>
+	
+
+
+			<div class="entry">
+  <div class="row">
+	
+	
+		<p>inspired by my wife, and i got the code below<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;stdlib.h&gt;</span><br><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line">#include &lt;strings.h&gt;</span><br><span class="line">int main ( int argc, char *argv[] )</span><br><span class="line">&#123;</span><br><span class="line">    char buf[81];</span><br><span class="line">    int i = 0;</span><br><span class="line">    memset(buf,0,sizeof(buf));</span><br><span class="line">    while(scanf(&quot;%s&quot;,buf)!=EOF)&#123;</span><br><span class="line">        for(i=1;i&lt;strlen(buf);i++)&#123;</span><br><span class="line">            if ( strlen(buf)%i==0 )&#123;</span><br><span class="line">                if (strncmp(buf,buf+i,strlen(buf)-i)==0) &#123;</span><br><span class="line">                    printf ( &quot; k is %d\n&quot;,i );</span><br><span class="line">                    break;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        if(i==strlen(buf))&#123;</span><br><span class="line">            printf ( &quot;k is %d\n&quot;,i );</span><br><span class="line">        &#125;</span><br><span class="line">        memset(buf,0,sizeof(buf));</span><br><span class="line">    &#125;</span><br><span class="line">    return EXIT_SUCCESS;</span><br></pre></td></tr></table></figure></p>
+
+	
+	</div>
+  <a type="button" href="/2016/12/21/UVa455/#more" class="btn btn-default more">Read More</a>
+</div>
+
+		
+			
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2016-12-21 </div>
+			<div class="article-title"><a href="/2016/12/21/UVa1225/" >UVa1225</a></div>						
+		</h3>
+	
+
+
+			<div class="entry">
+  <div class="row">
+	
+	
+		<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;stdlib.h&gt;</span><br><span class="line">#include &lt;stdlib.h&gt;</span><br><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line">#include &lt;strings.h&gt;</span><br><span class="line">int main ( int argc, char *argv[] )</span><br><span class="line">&#123;</span><br><span class="line">    int a[10]=&#123;0&#125;;</span><br><span class="line">    int temp = 0;</span><br><span class="line">    int i =0;</span><br><span class="line">    int num=0;</span><br><span class="line">    while(1==scanf(&quot;%d&quot;,&amp;num))&#123;</span><br><span class="line">        memset(a,0,sizeof(a));</span><br><span class="line">        for (i = 1; i &lt;= num; i++) &#123;</span><br><span class="line">            temp = i;</span><br><span class="line">            do &#123;</span><br><span class="line">                a[temp%10]++;</span><br><span class="line">                temp = temp/10;</span><br><span class="line">            &#125; while(temp);</span><br><span class="line">        &#125;</span><br><span class="line">        for (i = 0; i &lt; 9; i++) &#123;</span><br><span class="line">            printf ( &quot;%d &quot;,a[i] );           /* code */</span><br><span class="line">        &#125;</span><br><span class="line">        printf ( &quot;%d\n&quot;, a[i] );</span><br><span class="line">    &#125;</span><br><span class="line">    return EXIT_SUCCESS;</span><br><span class="line">&#125;				/* ----------  end of function main  ---------- */</span><br></pre></td></tr></table></figure>
+
+	
+	</div>
+  <a type="button" href="/2016/12/21/UVa1225/#more" class="btn btn-default more">Read More</a>
+</div>
+
+		
+			
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2016-12-21 </div>
 			<div class="article-title"><a href="/2016/12/21/3-2UVa1586/" >3_2UVa1586</a></div>						
 		</h3>
 	
@@ -396,60 +440,6 @@ var _hmt = _hmt || [];
 </div>
 
 		
-			
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2016-08-22 </div>
-			<div class="article-title"><a href="/2016/08/22/Spark-Window-Operation/" >Spark Window Operation </a></div>						
-		</h3>
-	
-
-
-			<div class="entry">
-  <div class="row">
-	
-	
-		
-	
-	</div>
-  <a type="button" href="/2016/08/22/Spark-Window-Operation/#more" class="btn btn-default more">Read More</a>
-</div>
-
-		
-			
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2016-08-19 </div>
-			<div class="article-title"><a href="/2016/08/19/Spark-2-0-Introduction/" >Spark 2.0 Introduction</a></div>						
-		</h3>
-	
-
-
-			<div class="entry">
-  <div class="row">
-	
-	
-		<h1 id="Spark-2-0-MLib-Introduction"><a href="#Spark-2-0-MLib-Introduction" class="headerlink" title="Spark 2.0 MLib Introduction"></a>Spark 2.0 MLib Introduction</h1><p>As of Spark 2.0, the RDD-based APIs in the spark.mllib package have entered maintenance mode. The primary Machine Learning API for Spark is now the DataFrame-based API in the spark.ml package.</p>
-<p>Spark2.0 ,在spark.mllib中的基于RDD的机器学习APIs将会进入维护模式。现在机器学习的主要的API基于DataFrame,位于spark.ml中。</p>
-<p>What are the implications?</p>
-<pre><code>MLlib will still support the RDD-based API in spark.mllib with bug fixes.
-MLlib will not add new features to the RDD-based API.
-In the Spark 2.x releases, MLlib will add features to the DataFrames-based API to reach feature parity with the RDD-based API.
-After reaching feature parity (roughly estimated for Spark 2.2), the RDD-based API will be deprecated.
-The RDD-based API is expected to be removed in Spark 3.0.
-</code></pre><p>Why is MLlib switching to the DataFrame-based API?</p>
-<pre><code>DataFrames provide a more user-friendly API than RDDs. The many benefits of DataFrames include Spark Datasources, SQL/DataFrame queries, Tungsten and Catalyst optimizations, and uniform APIs across languages.
-The DataFrame-based API for MLlib provides a uniform API across ML algorithms and across multiple languages.
-DataFrames facilitate practical ML Pipelines, particularly feature transformations. See the Pipelines guide for details.
-</code></pre>
-	
-	</div>
-  <a type="button" href="/2016/08/19/Spark-2-0-Introduction/#more" class="btn btn-default more">Read More</a>
-</div>
-
-		
 
 		</div>
 
@@ -502,17 +492,17 @@ DataFrames facilitate practical ML Pipelines, particularly feature transformatio
 		
 			<li><a href="/tags/Spark/">Spark<span>4</span></a></li>
 		
-			<li><a href="/tags/Python/">Python<span>1</span></a></li>
-		
-			<li><a href="/tags/Spark-Streaming/">Spark Streaming<span>1</span></a></li>
-		
-			<li><a href="/tags/竞赛/">竞赛<span>1</span></a></li>
-		
-			<li><a href="/tags/Spark-DataFrame/">Spark DataFrame<span>1</span></a></li>
+			<li><a href="/tags/竞赛/">竞赛<span>3</span></a></li>
 		
 			<li><a href="/tags/Scala/">Scala<span>3</span></a></li>
 		
+			<li><a href="/tags/Spark-DataFrame/">Spark DataFrame<span>1</span></a></li>
+		
+			<li><a href="/tags/Python/">Python<span>1</span></a></li>
+		
 			<li><a href="/tags/Spark-Scala-Streaming/">Spark Scala Streaming<span>1</span></a></li>
+		
+			<li><a href="/tags/Spark-Streaming/">Spark Streaming<span>1</span></a></li>
 		
 		 
 		</ul>
@@ -526,6 +516,14 @@ DataFrames facilitate practical ML Pipelines, particularly feature transformatio
   <ul class="entry list-unstyled">
     
       <li>
+        <a href="/2016/12/21/UVa455/" ><i class="fa fa-file-o"></i>UVa455</a>
+      </li>
+    
+      <li>
+        <a href="/2016/12/21/UVa1225/" ><i class="fa fa-file-o"></i>UVa1225</a>
+      </li>
+    
+      <li>
         <a href="/2016/12/21/3-2UVa1586/" ><i class="fa fa-file-o"></i>3_2UVa1586</a>
       </li>
     
@@ -535,14 +533,6 @@ DataFrames facilitate practical ML Pipelines, particularly feature transformatio
     
       <li>
         <a href="/2016/12/09/17年要读的书和学习的技能/" ><i class="fa fa-file-o"></i>17年要读的书和学习的技能</a>
-      </li>
-    
-      <li>
-        <a href="/2016/12/09/SparkDataFrameLikeSql/" ><i class="fa fa-file-o"></i>SparkDataFrameLikeSql</a>
-      </li>
-    
-      <li>
-        <a href="/2016/12/05/save-spark-rdd-into-Mysql/" ><i class="fa fa-file-o"></i>save spark rdd into Mysql</a>
       </li>
     
   </ul>

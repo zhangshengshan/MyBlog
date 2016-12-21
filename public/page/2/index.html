@@ -117,6 +117,60 @@ var _hmt = _hmt || [];
 	
 	<!-- display as entry -->	
 		<h3 class="title">
+			<div class="date"> 2016-08-22 </div>
+			<div class="article-title"><a href="/2016/08/22/Spark-Window-Operation/" >Spark Window Operation </a></div>						
+		</h3>
+	
+
+
+			<div class="entry">
+  <div class="row">
+	
+	
+		
+	
+	</div>
+  <a type="button" href="/2016/08/22/Spark-Window-Operation/#more" class="btn btn-default more">Read More</a>
+</div>
+
+		
+			
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2016-08-19 </div>
+			<div class="article-title"><a href="/2016/08/19/Spark-2-0-Introduction/" >Spark 2.0 Introduction</a></div>						
+		</h3>
+	
+
+
+			<div class="entry">
+  <div class="row">
+	
+	
+		<h1 id="Spark-2-0-MLib-Introduction"><a href="#Spark-2-0-MLib-Introduction" class="headerlink" title="Spark 2.0 MLib Introduction"></a>Spark 2.0 MLib Introduction</h1><p>As of Spark 2.0, the RDD-based APIs in the spark.mllib package have entered maintenance mode. The primary Machine Learning API for Spark is now the DataFrame-based API in the spark.ml package.</p>
+<p>Spark2.0 ,在spark.mllib中的基于RDD的机器学习APIs将会进入维护模式。现在机器学习的主要的API基于DataFrame,位于spark.ml中。</p>
+<p>What are the implications?</p>
+<pre><code>MLlib will still support the RDD-based API in spark.mllib with bug fixes.
+MLlib will not add new features to the RDD-based API.
+In the Spark 2.x releases, MLlib will add features to the DataFrames-based API to reach feature parity with the RDD-based API.
+After reaching feature parity (roughly estimated for Spark 2.2), the RDD-based API will be deprecated.
+The RDD-based API is expected to be removed in Spark 3.0.
+</code></pre><p>Why is MLlib switching to the DataFrame-based API?</p>
+<pre><code>DataFrames provide a more user-friendly API than RDDs. The many benefits of DataFrames include Spark Datasources, SQL/DataFrame queries, Tungsten and Catalyst optimizations, and uniform APIs across languages.
+The DataFrame-based API for MLlib provides a uniform API across ML algorithms and across multiple languages.
+DataFrames facilitate practical ML Pipelines, particularly feature transformations. See the Pipelines guide for details.
+</code></pre>
+	
+	</div>
+  <a type="button" href="/2016/08/19/Spark-2-0-Introduction/#more" class="btn btn-default more">Read More</a>
+</div>
+
+		
+			
+	
+	<!-- display as entry -->	
+		<h3 class="title">
 			<div class="date"> 2016-08-19 </div>
 			<div class="article-title"><a href="/2016/08/19/Save-DataFrame-into-a-partitioned-table-of-HIVE/" >Save DataFrame into a partitioned table of HIVE</a></div>						
 		</h3>
@@ -411,29 +465,6 @@ var _hmt = _hmt || [];
 </div>
 
 		
-			
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2016-04-21 </div>
-			<div class="article-title"><a href="/2016/04/21/1-100素数判断pyhon程序/" >1-100素数判断pyhon程序</a></div>						
-		</h3>
-	
-
-
-			<div class="entry">
-  <div class="row">
-	
-	
-		<p>求取1-100的所有素数，采用函数式编程<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">issu</span><span class="params">(x)</span>:</span></span><br><span class="line">    result=map(<span class="keyword">lambda</span> y:x%y,range(<span class="number">2</span>,x))</span><br><span class="line">    <span class="keyword">if</span>  len(result)!=<span class="number">0</span> <span class="keyword">and</span> <span class="number">0</span> <span class="keyword">not</span> <span class="keyword">in</span> result:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">print</span> filter(issu,range(<span class="number">1</span>,<span class="number">101</span>))</span><br></pre></td></tr></table></figure></p>
-<p>答案为<br><strong>[3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97]</strong></p>
-
-	
-	</div>
-  <a type="button" href="/2016/04/21/1-100素数判断pyhon程序/#more" class="btn btn-default more">Read More</a>
-</div>
-
-		
 
 		</div>
 
@@ -450,7 +481,7 @@ var _hmt = _hmt || [];
         <li><a href="/"><i class="fa fa-home"></i>Home</a></li>
 
 		
-          <li class="next disabled"><a>Next<i class="fa fa-arrow-circle-o-right"></i></a></li>
+		   <li class="next"> <a href="/page/3/" class="alignright next">Next<i class="fa fa-arrow-circle-o-right"></i></a> </li>          
         
 	
 </ul>
@@ -484,19 +515,19 @@ var _hmt = _hmt || [];
 		<h4>Tag Cloud</h4>
 		<ul class="tag_box inline list-unstyled">		
 		
-			<li><a href="/tags/竞赛/">竞赛<span>1</span></a></li>
-		
 			<li><a href="/tags/Spark-Scala-Streaming/">Spark Scala Streaming<span>1</span></a></li>
-		
-			<li><a href="/tags/Scala/">Scala<span>3</span></a></li>
 		
 			<li><a href="/tags/Spark/">Spark<span>4</span></a></li>
 		
-			<li><a href="/tags/Spark-DataFrame/">Spark DataFrame<span>1</span></a></li>
-		
 			<li><a href="/tags/Spark-Streaming/">Spark Streaming<span>1</span></a></li>
 		
+			<li><a href="/tags/竞赛/">竞赛<span>3</span></a></li>
+		
 			<li><a href="/tags/Python/">Python<span>1</span></a></li>
+		
+			<li><a href="/tags/Scala/">Scala<span>3</span></a></li>
+		
+			<li><a href="/tags/Spark-DataFrame/">Spark DataFrame<span>1</span></a></li>
 		
 		 
 		</ul>
@@ -510,6 +541,14 @@ var _hmt = _hmt || [];
   <ul class="entry list-unstyled">
     
       <li>
+        <a href="/2016/12/21/UVa455/" ><i class="fa fa-file-o"></i>UVa455</a>
+      </li>
+    
+      <li>
+        <a href="/2016/12/21/UVa1225/" ><i class="fa fa-file-o"></i>UVa1225</a>
+      </li>
+    
+      <li>
         <a href="/2016/12/21/3-2UVa1586/" ><i class="fa fa-file-o"></i>3_2UVa1586</a>
       </li>
     
@@ -519,14 +558,6 @@ var _hmt = _hmt || [];
     
       <li>
         <a href="/2016/12/09/17年要读的书和学习的技能/" ><i class="fa fa-file-o"></i>17年要读的书和学习的技能</a>
-      </li>
-    
-      <li>
-        <a href="/2016/12/09/SparkDataFrameLikeSql/" ><i class="fa fa-file-o"></i>SparkDataFrameLikeSql</a>
-      </li>
-    
-      <li>
-        <a href="/2016/12/05/save-spark-rdd-into-Mysql/" ><i class="fa fa-file-o"></i>save spark rdd into Mysql</a>
       </li>
     
   </ul>
