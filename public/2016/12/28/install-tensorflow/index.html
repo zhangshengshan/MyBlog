@@ -3,15 +3,17 @@
 <head>
   <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
   
-  <title>UVa455 | Zhangshengshan&#39;s Blog</title>
+  <title>install tensorflow | Zhangshengshan&#39;s Blog</title>
   <meta name="author" content="Zhang ShengShan">
   
-  <meta name="description" content="inspired by my wife, and i got the code below1234567891011121314151617181920212223#include &amp;lt;stdlib.h&amp;gt;#include &amp;lt;stdio.h&amp;gt;#include &amp;lt;string">
+  <meta name="description" content="anaconda 提供了python科学计算的环境，为各种python软件包安装和管理提供了遍历，按照官方文档的方式即可以安装tensorflow. 
+创建tensorflow的虚拟环境1conda create -n tensorflow python=3.5
+安装tensorflow12345$">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="UVa455"/>
+  <meta property="og:title" content="install tensorflow"/>
   <meta property="og:site_name" content="Zhangshengshan&#39;s Blog"/>
 
   
@@ -101,7 +103,7 @@ var _hmt = _hmt || [];
 
 	
 		<div class="page-header page-header-inverse ">		
-			<h1 class="title title-inverse "> UVa455</h1>
+			<h1 class="title title-inverse "> install tensorflow</h1>
 		</div>		
 	
 
@@ -121,7 +123,14 @@ var _hmt = _hmt || [];
 	<div class="mypage">		
 	  		
 
-	  <p>inspired by my wife, and i got the code below<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;stdlib.h&gt;</span><br><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line">#include &lt;strings.h&gt;</span><br><span class="line">int main ( int argc, char *argv[] )</span><br><span class="line">&#123;</span><br><span class="line">    char buf[81];</span><br><span class="line">    int i = 0;</span><br><span class="line">    memset(buf,0,sizeof(buf));</span><br><span class="line">    while(scanf(&quot;%s&quot;,buf)!=EOF)&#123;</span><br><span class="line">        for(i=1;i&lt;strlen(buf);i++)&#123;</span><br><span class="line">            if ( strlen(buf)%i==0 )&#123;</span><br><span class="line">                if (strncmp(buf,buf+i,strlen(buf)-i)==0) &#123;</span><br><span class="line">                    printf ( &quot; k is %d\n&quot;,i );</span><br><span class="line">                    break;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        if(i==strlen(buf))&#123;</span><br><span class="line">            printf ( &quot;k is %d\n&quot;,i );</span><br><span class="line">        &#125;</span><br><span class="line">        memset(buf,0,sizeof(buf));</span><br><span class="line">    &#125;</span><br><span class="line">    return EXIT_SUCCESS;</span><br></pre></td></tr></table></figure></p>
+	  <p>anaconda 提供了python科学计算的环境，为各种python软件包安装和管理提供了遍历，按照官方文档的方式即可以安装tensorflow. </p>
+<h2 id="创建tensorflow的虚拟环境"><a href="#创建tensorflow的虚拟环境" class="headerlink" title="创建tensorflow的虚拟环境"></a>创建tensorflow的虚拟环境</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda create -n tensorflow python=3.5</span><br></pre></td></tr></table></figure>
+<h2 id="安装tensorflow"><a href="#安装tensorflow" class="headerlink" title="安装tensorflow"></a>安装tensorflow</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ source activate tensorflow</span><br><span class="line">(tensorflow)$  # Your prompt should change</span><br><span class="line"></span><br><span class="line"># Linux/Mac OS X, Python 2.7/3.4/3.5, CPU only:</span><br><span class="line">(tensorflow)$ conda install -c conda-forge tensorflow</span><br></pre></td></tr></table></figure>
+<p>如果网络状况不好，那么可以采用pip安装。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ source activate tensorflow</span><br><span class="line">(tensorflow)$  # Your prompt should change</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export TF_BINARY_URL=https://storage.googleapis.com/tensorflow/mac/cpu/tensorflow-0.12.0-py3-none-any.whl</span><br></pre></td></tr></table></figure>
+<p><strong>请注意这里不能采用pip3安装，因为anaconda环境中pip3安装是有问题的</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install --ignore-installed --upgrade $TF_BINARY_URL</span><br></pre></td></tr></table></figure></p>
+<h2 id="测试是否安装成功"><a href="#测试是否安装成功" class="headerlink" title="测试是否安装成功"></a>测试是否安装成功</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">import tensorflow as tf</span><br><span class="line">print(tf.__versioin__)</span><br></pre></td></tr></table></figure>
 	  
 	</div>
 
@@ -130,14 +139,14 @@ var _hmt = _hmt || [];
 	<div class="pagination">
 <ul class="pagination">
 	 
-				
-    	<li class="prev"><a href="/2016/12/22/vim使用技巧/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>Prev</a></li>
-  		
+		
+          <li class="prev disabled"><a><i class="fa fa-arrow-circle-o-left"></i>Prev</a></li>
+        
 
         <li><a href="/archives"><i class="fa fa-archive"></i>Archive</a></li>
 
 		
-		   <li class="next"><a href="/2016/12/21/UVa1225/" class="alignright next">Next<i class="fa fa-arrow-circle-o-right"></i></a></li>         
+		   <li class="next"><a href="/2016/12/22/vim使用技巧/" class="alignright next">Next<i class="fa fa-arrow-circle-o-right"></i></a></li>         
         
 	
 </ul>
@@ -176,7 +185,7 @@ var _hmt = _hmt || [];
   <h2 class="title">Comments</h2>
 
   
-  	 <div class="ds-thread" data-thread-key="2016/12/21/UVa455/" data-title="UVa455" data-url="http://zhangshengshan.github.io/2016/12/21/UVa455/"></div>  
+  	 <div class="ds-thread" data-thread-key="2016/12/28/install-tensorflow/" data-title="install tensorflow" data-url="http://zhangshengshan.github.io/2016/12/28/install-tensorflow/"></div>  
   
 </section>
 
@@ -190,7 +199,7 @@ var _hmt = _hmt || [];
 	
 	<div class="meta-widget">
 	<i class="fa fa-clock-o"></i>
-	2016-12-21 
+	2016-12-28 
 	</div>
 	
 
@@ -203,7 +212,7 @@ var _hmt = _hmt || [];
 	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
     <ul id="tags" class="tag_box list-unstyled collapse in">	  
 	    
-  <li><a href="/tags/竞赛/">竞赛<span>3</span></a></li>
+  <li><a href="/tags/tensorflow/">tensorflow<span>1</span></a></li>
     </ul>
 	</div>
 		

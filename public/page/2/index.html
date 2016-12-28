@@ -117,6 +117,54 @@ var _hmt = _hmt || [];
 	
 	<!-- display as entry -->	
 		<h3 class="title">
+			<div class="date"> 2016-11-10 </div>
+			<div class="article-title"><a href="/2016/11/10/MAC访问你DOCKER容器中的WEB页面/" >MAC访问你DOCKER容器中的WEB页面</a></div>						
+		</h3>
+	
+
+
+			<div class="entry">
+  <div class="row">
+	
+	
+		<p>docker run -d -p hostport:dockerport –name your_container_name  your_image_name nginx -g “daemon off;”</p>
+<p>the above instruction start a docker nginx application which bind is port dockerport to its host port hostport.<br>usually you can access the nginx service on your host environment by curl the hostport, however in MacOs, ths hostport here<br>is the virtual machine. so when you curl localhost:hostport, you will get no response.</p>
+<p>the right way is access the virtual machine responding port. so the ip of virtual machine is needed.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker-machine ip your_virtual_machine</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl the ip you get:hostport</span><br></pre></td></tr></table></figure>
+
+	
+	</div>
+  <a type="button" href="/2016/11/10/MAC访问你DOCKER容器中的WEB页面/#more" class="btn btn-default more">Read More</a>
+</div>
+
+		
+			
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2016-11-09 </div>
+			<div class="article-title"><a href="/2016/11/09/Install-Caffe-on-CentOS/" >Install Caffe on CentOS</a></div>						
+		</h3>
+	
+
+
+			<div class="entry">
+  <div class="row">
+	
+	
+		<p>尽量不要在CentOS平台上安装Caffe</p>
+
+	
+	</div>
+  <a type="button" href="/2016/11/09/Install-Caffe-on-CentOS/#more" class="btn btn-default more">Read More</a>
+</div>
+
+		
+			
+	
+	<!-- display as entry -->	
+		<h3 class="title">
 			<div class="date"> 2016-08-22 </div>
 			<div class="article-title"><a href="/2016/08/22/Spark-Window-Operation/" >Spark Window Operation </a></div>						
 		</h3>
@@ -417,54 +465,6 @@ DataFrames facilitate practical ML Pipelines, particularly feature transformatio
 </div>
 
 		
-			
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2016-07-13 </div>
-			<div class="article-title"><a href="/2016/07/13/过拟合的原因/" >过拟合的原因</a></div>						
-		</h3>
-	
-
-
-			<div class="entry">
-  <div class="row">
-	
-	
-		<h1 id="过拟合产生原因"><a href="#过拟合产生原因" class="headerlink" title="过拟合产生原因"></a>过拟合产生原因</h1><h2 id="观测数据存在误差"><a href="#观测数据存在误差" class="headerlink" title="观测数据存在误差"></a>观测数据存在误差</h2><p>用于训练的样本数据，即观测数据因为各种个样的原因，总会产生误差。如果选择的假设过分追求能够完美解释观测数据（对于回归问题，可能是拟合曲线“穿过”所有的样本点，或者类似于均方误差过小），都有可能造成过拟合的现象。造成这种现象的根本原因在于，拟合曲线把误差也完美的学习了。</p>
-<h2 id="产生样本因素很多，但是实际可能只有小部分提取出来"><a href="#产生样本因素很多，但是实际可能只有小部分提取出来" class="headerlink" title="产生样本因素很多，但是实际可能只有小部分提取出来"></a>产生样本因素很多，但是实际可能只有小部分提取出来</h2><p>影响产生观测数据的因素有很多，但是现实中可能仅提取几个和结果相关度很高的因素来进行分析。这个时候观察数据会倾向于围绕你的有限模型的预测结果呈正态分布，于是你实际观察到的结果就是这个正态分布的随机取样，这个取样很可能受到其余因素的影响偏离你的模型所预测的中心，这个时候便不能贪心不足地试图通过改变模型来“完美”匹配数据，因为那些使结果偏离你的预测的贡献因素不是你这个有限模型里面含有的因素所能概括的，硬要打肿脸充胖子只能导致不实际的模型。</p>
-<h2 id="奥卡姆剃刀法则"><a href="#奥卡姆剃刀法则" class="headerlink" title="奥卡姆剃刀法则"></a>奥卡姆剃刀法则</h2><p>$$<br>p\left( h|D\right )   = p\left( h\right ) p\left( D|h\right )<br>$$<br>高卡姆剃刀法则的含义是如果存在多个假设和观察一致，则应当选择最简单的那一个。最简单的假设意味着$\left( h\right)$较大，而与观测一致，意味着似然数值较大，即$p\left( D|h\right )$较大。</p>
-<p>奥卡姆剃刀法则青睐于先验概率，认为先验较大的模型有较大的优势；最大似然法则认为似然大的模型具有较大的优势；而贝叶斯法则则认为二者乘积决定模型的选择问题。</p>
-<h2 id="贝叶斯奥卡姆剃刀"><a href="#贝叶斯奥卡姆剃刀" class="headerlink" title="贝叶斯奥卡姆剃刀"></a>贝叶斯奥卡姆剃刀</h2><p>上面的奥卡姆剃刀法则描述的是传统的剃刀法则，主要指先验概率$\left( h\right)$,而贝叶斯法奥卡姆剃刀法其实和似然$p\left( D|h\right )$上面，即该法则主要衡量的因素是似然本身出现的概率大小。 </p>
-
-	
-	</div>
-  <a type="button" href="/2016/07/13/过拟合的原因/#more" class="btn btn-default more">Read More</a>
-</div>
-
-		
-			
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2016-04-25 </div>
-			<div class="article-title"><a href="/2016/04/25/SPARK的宽依赖和窄依赖/" >SPARK的宽依赖和窄依赖</a></div>						
-		</h3>
-	
-
-
-			<div class="entry">
-  <div class="row">
-	
-	
-		<p>spark 的各种不同的transformation操作,可以根据是否依赖父RDDs的所有partision分为‘窄依赖’和‘宽依赖’,简单的说,有shuffle操作的就是宽依赖,而没有shuffle操作的就是窄依赖。<br>对于窄依赖,spark会尽量将他们划分为同一个stage,而宽依赖则会称为另外的stage。</p>
-
-	
-	</div>
-  <a type="button" href="/2016/04/25/SPARK的宽依赖和窄依赖/#more" class="btn btn-default more">Read More</a>
-</div>
-
-		
 
 		</div>
 
@@ -515,19 +515,23 @@ DataFrames facilitate practical ML Pipelines, particularly feature transformatio
 		<h4>Tag Cloud</h4>
 		<ul class="tag_box inline list-unstyled">		
 		
-			<li><a href="/tags/Spark-Scala-Streaming/">Spark Scala Streaming<span>1</span></a></li>
-		
-			<li><a href="/tags/Spark/">Spark<span>4</span></a></li>
-		
-			<li><a href="/tags/Spark-Streaming/">Spark Streaming<span>1</span></a></li>
-		
-			<li><a href="/tags/竞赛/">竞赛<span>3</span></a></li>
+			<li><a href="/tags/VIM/">VIM<span>1</span></a></li>
 		
 			<li><a href="/tags/Python/">Python<span>1</span></a></li>
 		
+			<li><a href="/tags/Spark-Streaming/">Spark Streaming<span>1</span></a></li>
+		
+			<li><a href="/tags/Spark/">Spark<span>4</span></a></li>
+		
 			<li><a href="/tags/Scala/">Scala<span>3</span></a></li>
 		
+			<li><a href="/tags/tensorflow/">tensorflow<span>1</span></a></li>
+		
 			<li><a href="/tags/Spark-DataFrame/">Spark DataFrame<span>1</span></a></li>
+		
+			<li><a href="/tags/Spark-Scala-Streaming/">Spark Scala Streaming<span>1</span></a></li>
+		
+			<li><a href="/tags/竞赛/">竞赛<span>3</span></a></li>
 		
 		 
 		</ul>
@@ -541,6 +545,14 @@ DataFrames facilitate practical ML Pipelines, particularly feature transformatio
   <ul class="entry list-unstyled">
     
       <li>
+        <a href="/2016/12/28/install-tensorflow/" ><i class="fa fa-file-o"></i>install tensorflow</a>
+      </li>
+    
+      <li>
+        <a href="/2016/12/22/vim使用技巧/" ><i class="fa fa-file-o"></i>vim使用技巧</a>
+      </li>
+    
+      <li>
         <a href="/2016/12/21/UVa455/" ><i class="fa fa-file-o"></i>UVa455</a>
       </li>
     
@@ -550,14 +562,6 @@ DataFrames facilitate practical ML Pipelines, particularly feature transformatio
     
       <li>
         <a href="/2016/12/21/3-2UVa1586/" ><i class="fa fa-file-o"></i>3_2UVa1586</a>
-      </li>
-    
-      <li>
-        <a href="/2016/12/15/Spark-Streaming-Programming-Guide/" ><i class="fa fa-file-o"></i>Spark Streaming Programming...</a>
-      </li>
-    
-      <li>
-        <a href="/2016/12/09/17年要读的书和学习的技能/" ><i class="fa fa-file-o"></i>17年要读的书和学习的技能</a>
       </li>
     
   </ul>
