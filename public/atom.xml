@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zhangshengshan.github.io/"/>
-  <updated>2017-01-04T15:30:36.000Z</updated>
+  <updated>2017-01-04T15:35:43.000Z</updated>
   <id>http://zhangshengshan.github.io/</id>
   
   <author>
@@ -20,11 +20,14 @@
     <link href="http://zhangshengshan.github.io/2017/01/04/Deep-MNIST-for-Experts/"/>
     <id>http://zhangshengshan.github.io/2017/01/04/Deep-MNIST-for-Experts/</id>
     <published>2017-01-04T15:30:16.000Z</published>
-    <updated>2017-01-04T15:30:36.000Z</updated>
+    <updated>2017-01-04T15:35:43.000Z</updated>
     
-    <content type="html"></content>
+    <content type="html">&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;from tensorflow.examples.tutorials.mnist import input_data&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;mnist = input_data.read_data_sets(&amp;apos;MNIST_data&amp;apos;, one_hot=True)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;import tensorflow as tf&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sess = tf.InteractiveSession()&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;#None 表示这里可能存在很多个样本, 784=28*28表示共有784个像素点&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;#y_表示与x对应的label, 由于采用的是one_hot编码的所以是10维&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;x = tf.placeholder(tf.float32, shape=[None, 784])&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;y_ = tf.placeholder(tf.float32, shape=[None, 10])&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;W = tf.Variable(tf.zeros([784,10]))&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;b = tf.Variable(tf.zeros([10]))&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sess.run(tf.global_variables_initializer())&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# 假设 有X个样本，那么 (X*784) * (784*10) = (X*10) &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;y = tf.matmul(x,W) + b&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;cross_entropy = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(y, y_))&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+</content>
     
     <summary type="html">
+    
+      &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class
     
     </summary>
     
