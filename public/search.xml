@@ -4,6 +4,13 @@
   
     
     <entry>
+      <title><![CDATA[Google 面试宝典]]></title>
+      <url>http://zhangshengshan.github.io/2017/01/04/Google-%E9%9D%A2%E8%AF%95%E5%AE%9D%E5%85%B8/</url>
+      <content type="html"><![CDATA[<p>geek.csdn.net/news/detail/107064</p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[install tensorflow]]></title>
       <url>http://zhangshengshan.github.io/2016/12/28/install-tensorflow/</url>
       <content type="html"><![CDATA[<p>anaconda 提供了python科学计算的环境，为各种python软件包安装和管理提供了遍历，按照官方文档的方式即可以安装tensorflow. </p>

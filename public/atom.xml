@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zhangshengshan.github.io/"/>
-  <updated>2016-12-28T07:10:37.000Z</updated>
+  <updated>2017-01-04T11:15:06.000Z</updated>
   <id>http://zhangshengshan.github.io/</id>
   
   <author>
@@ -14,6 +14,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Google 面试宝典</title>
+    <link href="http://zhangshengshan.github.io/2017/01/04/Google-%E9%9D%A2%E8%AF%95%E5%AE%9D%E5%85%B8/"/>
+    <id>http://zhangshengshan.github.io/2017/01/04/Google-面试宝典/</id>
+    <published>2017-01-04T11:13:16.000Z</published>
+    <updated>2017-01-04T11:15:06.000Z</updated>
+    
+    <content type="html">&lt;p&gt;geek.csdn.net/news/detail/107064&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;geek.csdn.net/news/detail/107064&lt;/p&gt;
+
+    
+    </summary>
+    
+    
+      <category term="基础" scheme="http://zhangshengshan.github.io/tags/%E5%9F%BA%E7%A1%80/"/>
+    
+  </entry>
   
   <entry>
     <title>install tensorflow</title>
@@ -545,133 +567,6 @@ DataFrames facilitate practical ML Pipelines, particularly feature transformatio
     
     
       <category term="Scala" scheme="http://zhangshengshan.github.io/tags/Scala/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>机器学习相关材料</title>
-    <link href="http://zhangshengshan.github.io/2016/07/13/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%9B%B8%E5%85%B3%E6%9D%90%E6%96%99/"/>
-    <id>http://zhangshengshan.github.io/2016/07/13/机器学习相关材料/</id>
-    <published>2016-07-13T12:42:36.000Z</published>
-    <updated>2016-07-13T12:58:27.000Z</updated>
-    
-    <content type="html">&lt;p&gt;1、数学基础&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;1、微积分 &lt;a href=&quot;http://v.163.com/special/sp/singlevariablecalculus.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://v.163.com/special/sp/singlevariablecalculus.html&lt;/a&gt;  &lt;a href=&quot;http://open.163.com/special/opencourse/multivariable.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://open.163.com/special/opencourse/multivariable.html&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;2、线性代数 &lt;a href=&quot;http://open.163.com/special/opencourse/daishu.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://open.163.com/special/opencourse/daishu.html&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;3、概率统计&lt;a href=&quot;http://open.163.com/special/Khan/probability.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://open.163.com/special/Khan/probability.html&lt;/a&gt;&lt;br&gt;想要深入学习机器学习，需要具有扎实的数学基础（矩阵分析和概率统计是基础的理论）&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;2、进阶版本数学基础课程&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;1、最优化理论（重点凸优化理论）  &lt;a href=&quot;http://stanford.edu/~boyd/cvxbook/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://stanford.edu/~boyd/cvxbook/&lt;/a&gt;   &lt;a href=&quot;http://xiaoyc.com/duality-theory-for-optimization/#1-1-lagrangian&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://xiaoyc.com/duality-theory-for-optimization/#1-1-lagrangian&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;2、时变函数与泛函分析 &lt;a href=&quot;http://ocw.nctu.edu.tw/course_list.php?page=2&amp;amp;bgid=1&amp;amp;gid=1&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://ocw.nctu.edu.tw/course_list.php?page=2&amp;amp;bgid=1&amp;amp;gid=1&lt;/a&gt;  &lt;a href=&quot;http://open.163.com/special/opencourse/fanhanfenxi.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://open.163.com/special/opencourse/fanhanfenxi.html&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;3、随机过程 Hyperlink: Stochastic Process MIT View the complete course: Discrete Stochastic Processes&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;3、机器学习基础课程&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;1、Coursera上Andrew Ng Andrew Ng的《机器学习》&lt;/li&gt;
-&lt;li&gt;2、林軒田(国立台湾大学) 機器學習基石&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;4、机器学习基础课程&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;1、 《统计学习方法》李航&lt;/li&gt;
-&lt;li&gt;2、 《机器学习导论》&lt;/li&gt;
-&lt;li&gt;3、 《PRML》&lt;/li&gt;
-&lt;li&gt;4、 《图解机器学习》[日]杉山将&lt;/li&gt;
-&lt;li&gt;5、   Machine Learning: A Probabilistic Prespective （Kevin Murphy）&lt;/li&gt;
-&lt;li&gt;6、   Pattern Recognition and Machine Learning （Christopher Bishop）&lt;/li&gt;
-&lt;li&gt;7、 《Spark机器学习》&lt;/li&gt;
-&lt;li&gt;8、 《机器学习实战》&lt;/li&gt;
-&lt;li&gt;9、 《贝叶斯思维:统计建模的Python学习法》&lt;/li&gt;
-&lt;li&gt;10、Python自然语言处理》&lt;/li&gt;
-&lt;li&gt;11、数学之美 （吴军）&lt;/li&gt;
-&lt;li&gt;12、Web智能算法 （Haralambos Marmanis, Dmitry Babenko）&lt;/li&gt;
-&lt;li&gt;13、集体智慧编程 （Toby Segaran）&lt;/li&gt;
-&lt;li&gt;14、推荐系统实践&lt;/li&gt;
-&lt;li&gt;15、计算广告学&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;5、深度学习（注定将成为最近几年的爆发式增长）&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;1、《Deep Learning》&lt;a href=&quot;http://www.deeplearningbook.org&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.deeplearningbook.org&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;2、  CSDN Blog &lt;a href=&quot;http://blog.csdn.net/zouxy09/article/details/8775360&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://blog.csdn.net/zouxy09/article/details/8775360&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;3、《斯坦福大学深度学习教程》&lt;a href=&quot;http://ufldl.stanford.edu/tutorial&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://ufldl.stanford.edu/tutorial&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;6、 杂项&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;《Choosing a Machine Learning Classifier》&lt;/li&gt;
-&lt;li&gt;《An Introduction to Deep Learning: From Perceptrons to Deep Networks》 译文：《&lt;a href=&quot;http://www.cnblogs.com/xiaowanyer/p/3701944.html》&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.cnblogs.com/xiaowanyer/p/3701944.html》&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;《The LION Way: Machine Learning plus Intelligent Optimization》&lt;/li&gt;
-&lt;li&gt;《分布式并行处理的数据》&lt;/li&gt;
-&lt;li&gt;《Deep Learning for Natural Language Processing and Related Applications》&lt;/li&gt;
-&lt;li&gt;《Neural Networks and Deep Learning》&lt;/li&gt;
-&lt;li&gt;《分布式机器学习的故事》&lt;/li&gt;
-&lt;li&gt;《Deep Learning 101》&lt;/li&gt;
-&lt;li&gt;《Deep learning from the bottom up》&lt;/li&gt;
-&lt;li&gt;《Deep Learning（深度学习）学习笔记整理系列》&lt;/li&gt;
-&lt;li&gt;《Google Turns To Deep Learning Classification To Fight Web Spam》&lt;/li&gt;
-&lt;li&gt;《Deep Learning Sentiment Analysis for Movie Reviews using Neo4j》&lt;/li&gt;
-&lt;li&gt;《EMNLP上两篇关于股票趋势的应用论文 》&lt;/li&gt;
-&lt;li&gt;《Learning to Rank for Information Retrieval and Natural Language Processing》&lt;/li&gt;
-&lt;li&gt;《Geoffrey E. Hinton》&lt;/li&gt;
-&lt;li&gt;《Andrej Karpathy的深度强化学习演示》 论文在这里&lt;/li&gt;
-&lt;li&gt;《用大数据和机器学习做股票价格预测》&lt;/li&gt;
-&lt;li&gt;《机器学习经典算法详解及Python实现–基于SMO的SVM分类器》&lt;/li&gt;
-&lt;li&gt;《Use Google’s Word2Vec for movie reviews》&lt;/li&gt;
-&lt;li&gt;《深度卷积神经网络下围棋》&lt;/li&gt;
-&lt;li&gt;《机器学习经典算法详解及Python实现–线性回归（Linear Regression）算法》&lt;/li&gt;
-&lt;li&gt;《Caffe》&lt;/li&gt;
-&lt;li&gt;《GoogLeNet深度学习模型的Caffe复现 》 GoogleNet论文&lt;/li&gt;
-&lt;li&gt;《Deep Learning实战之word2vec》&lt;/li&gt;
-&lt;li&gt;《A Deep Dive into Recurrent Neural Nets》&lt;/li&gt;
-&lt;li&gt;《Geoffrey E. Hinton个人主页》&lt;/li&gt;
-&lt;li&gt;《Deep Learning on Hadoop 2.0》&lt;/li&gt;
-&lt;li&gt;《美团推荐算法实践》&lt;/li&gt;
-&lt;li&gt;《The Trouble with SVMs》&lt;/li&gt;
-&lt;li&gt;《Gaussian Processes for Machine Learning》&lt;/li&gt;
-&lt;li&gt;《Introduction to ARMA Time Series Models – simplified》&lt;/li&gt;
-&lt;li&gt;《Neural Net in C++ Tutorial》&lt;/li&gt;
-&lt;li&gt;《Deep Learning Tutorials》&lt;/li&gt;
-&lt;li&gt;《Deep Learning, The Curse of Dimensionality, and Autoencoders》&lt;/li&gt;
-&lt;li&gt;《Topic modeling with LDA: MLlib meets GraphX》&lt;/li&gt;
-&lt;li&gt;《Deep Learning for Multi-label Classification》&lt;/li&gt;
-&lt;li&gt;《Google DeepMind publications》  AlphaGo团队官方论文&lt;/li&gt;
-&lt;li&gt;《AM207: Monte Carlo Methods, Stochastic Optimization》&lt;/li&gt;
-&lt;li&gt;《Back-to-Basics Weekend Reading - Machine Learning》&lt;/li&gt;
-&lt;li&gt;《A Probabilistic Theory of Deep Learning》&lt;/li&gt;
-&lt;li&gt;《How does Quora use machine learning in 2015?》&lt;/li&gt;
-&lt;li&gt;《Parallel Machine Learning with scikit-learn and IPython》&lt;/li&gt;
-&lt;li&gt;《Time Series Econometrics - A Concise Course》&lt;/li&gt;
-&lt;li&gt;《A comparison of open source tools for sentiment analysis》&lt;/li&gt;
-&lt;li&gt;《International Joint Conference on Artificial Intelligence Accepted paper》&lt;/li&gt;
-&lt;li&gt;《How to Evaluate Machine Learning Models, Part 1: Orientation》 How to Evaluate Machine Learning Models, Part 2a: Classification Metrics,How to Evaluate Machine Learning Models, Part 2b: Ranking and Regression Metrics.&lt;/li&gt;
-&lt;li&gt;《Learning scikit-learn: Machine Learning in Python》&lt;/li&gt;
-&lt;li&gt;《Lightning fast Machine Learning with Spark》&lt;/li&gt;
-&lt;li&gt;《How we’re using machine learning to fight shell selling》&lt;/li&gt;
-&lt;li&gt;《Mining of Massive Datasets》&lt;/li&gt;
-&lt;li&gt;《Advances in Extreme Learning Machines》&lt;/li&gt;
-&lt;li&gt;《The Curse of Dimensionality in classification》&lt;/li&gt;
-&lt;li&gt;《Demistifying LSTM Neural Networks》&lt;/li&gt;
-&lt;li&gt;《Decoding Dimensionality Reduction, PCA and SVD》&lt;/li&gt;
-&lt;li&gt;《What are the advantages of different classification algorithms?》&lt;/li&gt;
-&lt;li&gt;《Kaggle R Tutorial on Machine Learning》 《Interactive R Tutorial: Machine Learning for the Titanic Competition》.&lt;/li&gt;
-&lt;li&gt;《Logistic Regression and Gradient Descent》&lt;/li&gt;
-&lt;li&gt;《Stock Forecasting With Machine Learning - Seven Possible Errors》&lt;/li&gt;
-&lt;li&gt;《LR原理解析》  &lt;a href=&quot;http://www.cnblogs.com/xiaowanyer/p/3701944.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.cnblogs.com/xiaowanyer/p/3701944.html&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;机器学习顶级会议和杂志 &lt;a href=&quot;http://icml.cc/2015/?page_id=175&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://icml.cc/2015/?page_id=175&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;贝耶斯回归材料 &lt;a href=&quot;http://blog.csdn.net/haoni123321/article/details/37913795&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://blog.csdn.net/haoni123321/article/details/37913795&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;贝耶斯回归材料 &lt;a href=&quot;http://mindhacks.cn/2008/09/21/the-magical-bayesian-method/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://mindhacks.cn/2008/09/21/the-magical-bayesian-method/&lt;/a&gt; &lt;/li&gt;
-&lt;li&gt;AlphaGo原理解析&lt;a href=&quot;https://www.youtube.com/watch?v=63FDxJ5e_Ew&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://www.youtube.com/watch?v=63FDxJ5e_Ew&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;1、数学基础&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;1、微积分 &lt;a href=&quot;http://v.163.com/special/sp/singlevariablecalculus.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://v.163.c
-    
-    </summary>
-    
     
   </entry>
   
