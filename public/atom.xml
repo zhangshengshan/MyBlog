@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zhangshengshan.github.io/"/>
-  <updated>2017-01-04T11:15:06.000Z</updated>
+  <updated>2017-01-04T15:30:36.000Z</updated>
   <id>http://zhangshengshan.github.io/</id>
   
   <author>
@@ -14,6 +14,24 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Deep MNIST for Experts</title>
+    <link href="http://zhangshengshan.github.io/2017/01/04/Deep-MNIST-for-Experts/"/>
+    <id>http://zhangshengshan.github.io/2017/01/04/Deep-MNIST-for-Experts/</id>
+    <published>2017-01-04T15:30:16.000Z</published>
+    <updated>2017-01-04T15:30:36.000Z</updated>
+    
+    <content type="html"></content>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+      <category term="tensorflow" scheme="http://zhangshengshan.github.io/tags/tensorflow/"/>
+    
+  </entry>
   
   <entry>
     <title>Google 面试宝典</title>
@@ -535,33 +553,6 @@ DataFrames facilitate practical ML Pipelines, particularly feature transformatio
     <summary type="html">
     
       &lt;p&gt;Lists are not built in in Scala; they are defined by an abstract class List, &lt;strong&gt;which comes with two subclasses for :: and Nil.&lt;/str
-    
-    </summary>
-    
-    
-      <category term="Scala" scheme="http://zhangshengshan.github.io/tags/Scala/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Scala call-by-name call-by-value</title>
-    <link href="http://zhangshengshan.github.io/2016/07/19/Scala-call-by-name-call-by-value/"/>
-    <id>http://zhangshengshan.github.io/2016/07/19/Scala-call-by-name-call-by-value/</id>
-    <published>2016-07-19T15:30:34.000Z</published>
-    <updated>2016-11-10T16:00:14.000Z</updated>
-    
-    <content type="html">&lt;p&gt;Call-by-value has the advantage that it avoids repeated evaluation of arguments.&lt;br&gt;Call-by-name has the advantage that it avoids evaluation of arguments when the&lt;br&gt;parameter is not used at all by the function. Call-by-value is usually more efficient&lt;br&gt;than call-by-name, but a call-by-value evaluation might loop where a call-by-name&lt;br&gt;evaluation would terminate. Consider:&lt;/p&gt;
-&lt;p&gt;Call-by-value 的优势在于避免不断的计算参数。而call-by-name的优势在于如果一个函数根本就不会用到的参数，那么也不会被计算，与call-by-value恰好相反。下面的例子展示了一个Call-by-value会不停循环但是Call-by-name会停止的例子。&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;scala&amp;gt; def loop: Int = loop&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;loop: Int&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;scala&amp;gt; def first(x: Int, y: Int) = x&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;first: (Int,Int)Int&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;Then first(1, loop) reduces with call-by-name to 1, whereas the same term reduces with call-by-value repeatedly to itself, hence evaluation does not terminate.&lt;br&gt;first(1, loop)&lt;br&gt;→ first(1, loop)&lt;br&gt;→ first(1, loop)&lt;br&gt;→ …&lt;br&gt;上面的例子，之所以不停的循环的原因就是,y 被声明为 Call-by-value，因而，按照上面的说法，无论是否这个参数会被用到，该参数都会被计算，所以会不停的循环。&lt;/p&gt;
-&lt;p&gt;Scala uses call-by-value by default, but it switches to call-by-name evaluation if the&lt;br&gt;parameter type is preceded by =&amp;gt;.&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;scala&amp;gt; def constOne(x: Int, y: =&amp;gt; Int) = 1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;constOne: (Int,=&amp;gt; Int)Int&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;scala&amp;gt; constOne(1, loop)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;unnamed0: Int = 1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;scala&amp;gt; constOne(loop, 2) // gives an infinite loop.&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;constOne(1,loop) 会停止，y被声明为Call-by-name, 所以当没有用到这个参数的时候,则不会被计算，因此不会陷入无限循环。&lt;br&gt;constOne(loop,2) 则恰好相反。&lt;/p&gt;
-&lt;p&gt;本文示例 来自于  《ScalaByExample》,感谢原作者。&lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Call-by-value has the advantage that it avoids repeated evaluation of arguments.&lt;br&gt;Call-by-name has the advantage that it avoids evaluat
     
     </summary>
     
