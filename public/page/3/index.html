@@ -1,0 +1,556 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+  
+  <title>Page 3 | Zhangshengshan&#39;s Blog</title>
+  <meta name="author" content="Zhang ShengShan">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+  <meta property="og:site_name" content="Zhangshengshan&#39;s Blog"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  
+  
+    <link href="/favicon.png" rel="icon">
+  
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/css/themes/simplex.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/responsive.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+
+  <!-- analytics -->
+  
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?500f3b30aa83b6b7466c7ce0c0c18fb8";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+
+</head>
+
+ <body>  
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	<span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+       <a class="navbar-brand" href="/">Zhangshengshan&#39;s Blog</a>
+      <div class="collapse navbar-collapse nav-menu">
+		<ul class="nav navbar-nav">
+		  
+		  <li>
+			<a href="/archives" title="All the articles.">
+			  <i class="fa fa-archive"></i>Archives
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/categories" title="All the categories.">
+			  <i class="fa fa-folder"></i>Categories
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/tags" title="All the tags.">
+			  <i class="fa fa-tags"></i>Tags
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/about" title="About me.">
+			  <i class="fa fa-user"></i>About
+			</a>
+		  </li>
+		  
+		</ul>
+      </div>
+    </div> <!-- container -->
+</nav>
+<div class="clearfix"></div>
+
+  <div class="container">
+  	<div class="content">
+    	 <div class="page-header page-header-inverse ">
+  <h1 class="title title-inverse ">Blogs on machine learning for my baby Ruru</h1>
+</div>
+
+<div class="row page">
+
+	
+	<div class="col-md-9">
+	
+
+		<div class="slogan">
+      <i class="fa fa-heart"></i>
+      Yet another bootstrap theme.
+</div>    
+		<div id="top_search"></div>
+		<div class="mypage">
+		
+		<!-- title and entry -->
+		
+			
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2016-07-26 </div>
+			<div class="article-title"><a href="/2016/07/26/ScalaList/" >ScalaList</a></div>						
+		</h3>
+	
+
+
+			<div class="entry">
+  <div class="row">
+	
+	
+		<p>Lists are not built in in Scala; they are defined by an abstract class List, <strong>which comes with two subclasses for :: and Nil.</strong><br>List 并不是Scala的内置类型。List被定义为抽象类。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">package scala</span><br><span class="line">abstract class List[+A] &#123;</span><br></pre></td></tr></table></figure>
+<p>List is an abstract class, so one cannot define elements by calling the empty List constructor (e.g. by new List). The class has a type parameter a. It is co-variant in this parameter,which means thatList[S] &lt;: List[T] for all types S and T such thatS &lt;: T.The class is situated in the package scala.This is a package containing the most important standard classes of Scala. List defines a number of methods, which are explained in the following.<br>List 是抽象类，所以没有办法通过空的List构造器来定义元素。List存在一个类型参数A。该参数是协变类型, 对于任意类型S和T，如果S&lt;:T, 则 List[S]&lt;:List[T]。该类的定义在scala package中。这个包是Scala中最重要的标准calsses。</p>
+
+	
+	</div>
+  <a type="button" href="/2016/07/26/ScalaList/#more" class="btn btn-default more">Read More</a>
+</div>
+
+		
+			
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2016-07-19 </div>
+			<div class="article-title"><a href="/2016/07/19/Scala-call-by-name-call-by-value/" >Scala call-by-name call-by-value</a></div>						
+		</h3>
+	
+
+
+			<div class="entry">
+  <div class="row">
+	
+	
+		<p>Call-by-value has the advantage that it avoids repeated evaluation of arguments.<br>Call-by-name has the advantage that it avoids evaluation of arguments when the<br>parameter is not used at all by the function. Call-by-value is usually more efficient<br>than call-by-name, but a call-by-value evaluation might loop where a call-by-name<br>evaluation would terminate. Consider:</p>
+<p>Call-by-value 的优势在于避免不断的计算参数。而call-by-name的优势在于如果一个函数根本就不会用到的参数，那么也不会被计算，与call-by-value恰好相反。下面的例子展示了一个Call-by-value会不停循环但是Call-by-name会停止的例子。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">scala&gt; def loop: Int = loop</span><br><span class="line">loop: Int</span><br><span class="line">scala&gt; def first(x: Int, y: Int) = x</span><br><span class="line">first: (Int,Int)Int</span><br></pre></td></tr></table></figure>
+<p>Then first(1, loop) reduces with call-by-name to 1, whereas the same term reduces with call-by-value repeatedly to itself, hence evaluation does not terminate.<br>first(1, loop)<br>→ first(1, loop)<br>→ first(1, loop)<br>→ …<br>上面的例子，之所以不停的循环的原因就是,y 被声明为 Call-by-value，因而，按照上面的说法，无论是否这个参数会被用到，该参数都会被计算，所以会不停的循环。</p>
+<p>Scala uses call-by-value by default, but it switches to call-by-name evaluation if the<br>parameter type is preceded by =&gt;.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">scala&gt; def constOne(x: Int, y: =&gt; Int) = 1</span><br><span class="line">constOne: (Int,=&gt; Int)Int</span><br><span class="line">scala&gt; constOne(1, loop)</span><br><span class="line">unnamed0: Int = 1</span><br><span class="line">scala&gt; constOne(loop, 2) // gives an infinite loop.</span><br></pre></td></tr></table></figure></p>
+<p>constOne(1,loop) 会停止，y被声明为Call-by-name, 所以当没有用到这个参数的时候,则不会被计算，因此不会陷入无限循环。<br>constOne(loop,2) 则恰好相反。</p>
+<p>本文示例 来自于  《ScalaByExample》,感谢原作者。</p>
+
+	
+	</div>
+  <a type="button" href="/2016/07/19/Scala-call-by-name-call-by-value/#more" class="btn btn-default more">Read More</a>
+</div>
+
+		
+			
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2016-07-13 </div>
+			<div class="article-title"><a href="/2016/07/13/机器学习相关材料/" >机器学习相关材料</a></div>						
+		</h3>
+	
+
+
+			<div class="entry">
+  <div class="row">
+	
+	
+		<p>1、数学基础</p>
+<ul>
+<li>1、微积分 <a href="http://v.163.com/special/sp/singlevariablecalculus.html" target="_blank" rel="external">http://v.163.com/special/sp/singlevariablecalculus.html</a>  <a href="http://open.163.com/special/opencourse/multivariable.html" target="_blank" rel="external">http://open.163.com/special/opencourse/multivariable.html</a></li>
+<li>2、线性代数 <a href="http://open.163.com/special/opencourse/daishu.html" target="_blank" rel="external">http://open.163.com/special/opencourse/daishu.html</a></li>
+<li>3、概率统计<a href="http://open.163.com/special/Khan/probability.html" target="_blank" rel="external">http://open.163.com/special/Khan/probability.html</a><br>想要深入学习机器学习，需要具有扎实的数学基础（矩阵分析和概率统计是基础的理论）</li>
+</ul>
+<p>2、进阶版本数学基础课程</p>
+<ul>
+<li>1、最优化理论（重点凸优化理论）  <a href="http://stanford.edu/~boyd/cvxbook/" target="_blank" rel="external">http://stanford.edu/~boyd/cvxbook/</a>   <a href="http://xiaoyc.com/duality-theory-for-optimization/#1-1-lagrangian" target="_blank" rel="external">http://xiaoyc.com/duality-theory-for-optimization/#1-1-lagrangian</a></li>
+<li>2、时变函数与泛函分析 <a href="http://ocw.nctu.edu.tw/course_list.php?page=2&amp;bgid=1&amp;gid=1" target="_blank" rel="external">http://ocw.nctu.edu.tw/course_list.php?page=2&amp;bgid=1&amp;gid=1</a>  <a href="http://open.163.com/special/opencourse/fanhanfenxi.html" target="_blank" rel="external">http://open.163.com/special/opencourse/fanhanfenxi.html</a></li>
+<li>3、随机过程 Hyperlink: Stochastic Process MIT View the complete course: Discrete Stochastic Processes</li>
+</ul>
+<p>3、机器学习基础课程</p>
+<ul>
+<li>1、Coursera上Andrew Ng Andrew Ng的《机器学习》</li>
+<li>2、林軒田(国立台湾大学) 機器學習基石</li>
+</ul>
+<p>4、机器学习基础课程</p>
+<ul>
+<li>1、 《统计学习方法》李航</li>
+<li>2、 《机器学习导论》</li>
+<li>3、 《PRML》</li>
+<li>4、 《图解机器学习》[日]杉山将</li>
+<li>5、   Machine Learning: A Probabilistic Prespective （Kevin Murphy）</li>
+<li>6、   Pattern Recognition and Machine Learning （Christopher Bishop）</li>
+<li>7、 《Spark机器学习》</li>
+<li>8、 《机器学习实战》</li>
+<li>9、 《贝叶斯思维:统计建模的Python学习法》</li>
+<li>10、Python自然语言处理》</li>
+<li>11、数学之美 （吴军）</li>
+<li>12、Web智能算法 （Haralambos Marmanis, Dmitry Babenko）</li>
+<li>13、集体智慧编程 （Toby Segaran）</li>
+<li>14、推荐系统实践</li>
+<li>15、计算广告学</li>
+</ul>
+<p>5、深度学习（注定将成为最近几年的爆发式增长）</p>
+<ul>
+<li>1、《Deep Learning》<a href="http://www.deeplearningbook.org" target="_blank" rel="external">http://www.deeplearningbook.org</a></li>
+<li>2、  CSDN Blog <a href="http://blog.csdn.net/zouxy09/article/details/8775360" target="_blank" rel="external">http://blog.csdn.net/zouxy09/article/details/8775360</a></li>
+<li>3、《斯坦福大学深度学习教程》<a href="http://ufldl.stanford.edu/tutorial" target="_blank" rel="external">http://ufldl.stanford.edu/tutorial</a></li>
+</ul>
+<p>6、 杂项</p>
+<ul>
+<li>《Choosing a Machine Learning Classifier》</li>
+<li>《An Introduction to Deep Learning: From Perceptrons to Deep Networks》 译文：《<a href="http://www.cnblogs.com/xiaowanyer/p/3701944.html》" target="_blank" rel="external">http://www.cnblogs.com/xiaowanyer/p/3701944.html》</a></li>
+<li>《The LION Way: Machine Learning plus Intelligent Optimization》</li>
+<li>《分布式并行处理的数据》</li>
+<li>《Deep Learning for Natural Language Processing and Related Applications》</li>
+<li>《Neural Networks and Deep Learning》</li>
+<li>《分布式机器学习的故事》</li>
+<li>《Deep Learning 101》</li>
+<li>《Deep learning from the bottom up》</li>
+<li>《Deep Learning（深度学习）学习笔记整理系列》</li>
+<li>《Google Turns To Deep Learning Classification To Fight Web Spam》</li>
+<li>《Deep Learning Sentiment Analysis for Movie Reviews using Neo4j》</li>
+<li>《EMNLP上两篇关于股票趋势的应用论文 》</li>
+<li>《Learning to Rank for Information Retrieval and Natural Language Processing》</li>
+<li>《Geoffrey E. Hinton》</li>
+<li>《Andrej Karpathy的深度强化学习演示》 论文在这里</li>
+<li>《用大数据和机器学习做股票价格预测》</li>
+<li>《机器学习经典算法详解及Python实现–基于SMO的SVM分类器》</li>
+<li>《Use Google’s Word2Vec for movie reviews》</li>
+<li>《深度卷积神经网络下围棋》</li>
+<li>《机器学习经典算法详解及Python实现–线性回归（Linear Regression）算法》</li>
+<li>《Caffe》</li>
+<li>《GoogLeNet深度学习模型的Caffe复现 》 GoogleNet论文</li>
+<li>《Deep Learning实战之word2vec》</li>
+<li>《A Deep Dive into Recurrent Neural Nets》</li>
+<li>《Geoffrey E. Hinton个人主页》</li>
+<li>《Deep Learning on Hadoop 2.0》</li>
+<li>《美团推荐算法实践》</li>
+<li>《The Trouble with SVMs》</li>
+<li>《Gaussian Processes for Machine Learning》</li>
+<li>《Introduction to ARMA Time Series Models – simplified》</li>
+<li>《Neural Net in C++ Tutorial》</li>
+<li>《Deep Learning Tutorials》</li>
+<li>《Deep Learning, The Curse of Dimensionality, and Autoencoders》</li>
+<li>《Topic modeling with LDA: MLlib meets GraphX》</li>
+<li>《Deep Learning for Multi-label Classification》</li>
+<li>《Google DeepMind publications》  AlphaGo团队官方论文</li>
+<li>《AM207: Monte Carlo Methods, Stochastic Optimization》</li>
+<li>《Back-to-Basics Weekend Reading - Machine Learning》</li>
+<li>《A Probabilistic Theory of Deep Learning》</li>
+<li>《How does Quora use machine learning in 2015?》</li>
+<li>《Parallel Machine Learning with scikit-learn and IPython》</li>
+<li>《Time Series Econometrics - A Concise Course》</li>
+<li>《A comparison of open source tools for sentiment analysis》</li>
+<li>《International Joint Conference on Artificial Intelligence Accepted paper》</li>
+<li>《How to Evaluate Machine Learning Models, Part 1: Orientation》 How to Evaluate Machine Learning Models, Part 2a: Classification Metrics,How to Evaluate Machine Learning Models, Part 2b: Ranking and Regression Metrics.</li>
+<li>《Learning scikit-learn: Machine Learning in Python》</li>
+<li>《Lightning fast Machine Learning with Spark》</li>
+<li>《How we’re using machine learning to fight shell selling》</li>
+<li>《Mining of Massive Datasets》</li>
+<li>《Advances in Extreme Learning Machines》</li>
+<li>《The Curse of Dimensionality in classification》</li>
+<li>《Demistifying LSTM Neural Networks》</li>
+<li>《Decoding Dimensionality Reduction, PCA and SVD》</li>
+<li>《What are the advantages of different classification algorithms?》</li>
+<li>《Kaggle R Tutorial on Machine Learning》 《Interactive R Tutorial: Machine Learning for the Titanic Competition》.</li>
+<li>《Logistic Regression and Gradient Descent》</li>
+<li>《Stock Forecasting With Machine Learning - Seven Possible Errors》</li>
+<li>《LR原理解析》  <a href="http://www.cnblogs.com/xiaowanyer/p/3701944.html" target="_blank" rel="external">http://www.cnblogs.com/xiaowanyer/p/3701944.html</a></li>
+<li>机器学习顶级会议和杂志 <a href="http://icml.cc/2015/?page_id=175" target="_blank" rel="external">http://icml.cc/2015/?page_id=175</a></li>
+<li>贝耶斯回归材料 <a href="http://blog.csdn.net/haoni123321/article/details/37913795" target="_blank" rel="external">http://blog.csdn.net/haoni123321/article/details/37913795</a></li>
+<li>贝耶斯回归材料 <a href="http://mindhacks.cn/2008/09/21/the-magical-bayesian-method" target="_blank" rel="external">http://mindhacks.cn/2008/09/21/the-magical-bayesian-method</a></li>
+<li>AlphaGo原理解析<a href="https://www.youtube.com/watch?v=63FDxJ5e_Ew" target="_blank" rel="external">https://www.youtube.com/watch?v=63FDxJ5e_Ew</a></li>
+</ul>
+
+	
+	</div>
+  <a type="button" href="/2016/07/13/机器学习相关材料/#more" class="btn btn-default more">Read More</a>
+</div>
+
+		
+			
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2016-07-13 </div>
+			<div class="article-title"><a href="/2016/07/13/过拟合的原因/" >过拟合的原因</a></div>						
+		</h3>
+	
+
+
+			<div class="entry">
+  <div class="row">
+	
+	
+		<h1 id="过拟合产生原因"><a href="#过拟合产生原因" class="headerlink" title="过拟合产生原因"></a>过拟合产生原因</h1><h2 id="观测数据存在误差"><a href="#观测数据存在误差" class="headerlink" title="观测数据存在误差"></a>观测数据存在误差</h2><p>用于训练的样本数据，即观测数据因为各种个样的原因，总会产生误差。如果选择的假设过分追求能够完美解释观测数据（对于回归问题，可能是拟合曲线“穿过”所有的样本点，或者类似于均方误差过小），都有可能造成过拟合的现象。造成这种现象的根本原因在于，拟合曲线把误差也完美的学习了。</p>
+<h2 id="产生样本因素很多，但是实际可能只有小部分提取出来"><a href="#产生样本因素很多，但是实际可能只有小部分提取出来" class="headerlink" title="产生样本因素很多，但是实际可能只有小部分提取出来"></a>产生样本因素很多，但是实际可能只有小部分提取出来</h2><p>影响产生观测数据的因素有很多，但是现实中可能仅提取几个和结果相关度很高的因素来进行分析。这个时候观察数据会倾向于围绕你的有限模型的预测结果呈正态分布，于是你实际观察到的结果就是这个正态分布的随机取样，这个取样很可能受到其余因素的影响偏离你的模型所预测的中心，这个时候便不能贪心不足地试图通过改变模型来“完美”匹配数据，因为那些使结果偏离你的预测的贡献因素不是你这个有限模型里面含有的因素所能概括的，硬要打肿脸充胖子只能导致不实际的模型。</p>
+<h2 id="奥卡姆剃刀法则"><a href="#奥卡姆剃刀法则" class="headerlink" title="奥卡姆剃刀法则"></a>奥卡姆剃刀法则</h2><p>$$<br>p\left( h|D\right )   = p\left( h\right ) p\left( D|h\right )<br>$$<br>高卡姆剃刀法则的含义是如果存在多个假设和观察一致，则应当选择最简单的那一个。最简单的假设意味着$\left( h\right)$较大，而与观测一致，意味着似然数值较大，即$p\left( D|h\right )$较大。</p>
+<p>奥卡姆剃刀法则青睐于先验概率，认为先验较大的模型有较大的优势；最大似然法则认为似然大的模型具有较大的优势；而贝叶斯法则则认为二者乘积决定模型的选择问题。</p>
+<h2 id="贝叶斯奥卡姆剃刀"><a href="#贝叶斯奥卡姆剃刀" class="headerlink" title="贝叶斯奥卡姆剃刀"></a>贝叶斯奥卡姆剃刀</h2><p>上面的奥卡姆剃刀法则描述的是传统的剃刀法则，主要指先验概率$\left( h\right)$,而贝叶斯法奥卡姆剃刀法其实和似然$p\left( D|h\right )$上面，即该法则主要衡量的因素是似然本身出现的概率大小。 </p>
+
+	
+	</div>
+  <a type="button" href="/2016/07/13/过拟合的原因/#more" class="btn btn-default more">Read More</a>
+</div>
+
+		
+			
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2016-04-25 </div>
+			<div class="article-title"><a href="/2016/04/25/SPARK的宽依赖和窄依赖/" >SPARK的宽依赖和窄依赖</a></div>						
+		</h3>
+	
+
+
+			<div class="entry">
+  <div class="row">
+	
+	
+		<p>spark 的各种不同的transformation操作,可以根据是否依赖父RDDs的所有partision分为‘窄依赖’和‘宽依赖’,简单的说,有shuffle操作的就是宽依赖,而没有shuffle操作的就是窄依赖。<br>对于窄依赖,spark会尽量将他们划分为同一个stage,而宽依赖则会称为另外的stage。</p>
+
+	
+	</div>
+  <a type="button" href="/2016/04/25/SPARK的宽依赖和窄依赖/#more" class="btn btn-default more">Read More</a>
+</div>
+
+		
+			
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2016-04-21 </div>
+			<div class="article-title"><a href="/2016/04/21/1-100素数判断pyhon程序/" >1-100素数判断pyhon程序</a></div>						
+		</h3>
+	
+
+
+			<div class="entry">
+  <div class="row">
+	
+	
+		<p>求取1-100的所有素数，采用函数式编程<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">issu</span><span class="params">(x)</span>:</span></span><br><span class="line">    result=map(<span class="keyword">lambda</span> y:x%y,range(<span class="number">2</span>,x))</span><br><span class="line">    <span class="keyword">if</span>  len(result)!=<span class="number">0</span> <span class="keyword">and</span> <span class="number">0</span> <span class="keyword">not</span> <span class="keyword">in</span> result:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">print</span> filter(issu,range(<span class="number">1</span>,<span class="number">101</span>))</span><br></pre></td></tr></table></figure></p>
+<p>答案为<br><strong>[3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97]</strong></p>
+
+	
+	</div>
+  <a type="button" href="/2016/04/21/1-100素数判断pyhon程序/#more" class="btn btn-default more">Read More</a>
+</div>
+
+		
+
+		</div>
+
+		<!-- pagination -->
+		<div>
+  		<center>
+		<div class="pagination">
+<ul class="pagination">
+	 
+		
+    	<li class="prev"><a href="/page/2/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i> Prev</a></li>
+  		
+
+        <li><a href="/"><i class="fa fa-home"></i>Home</a></li>
+
+		
+          <li class="next disabled"><a>Next<i class="fa fa-arrow-circle-o-right"></i></a></li>
+        
+	
+</ul>
+</div>
+
+  		</center>
+		</div>
+
+		
+		
+	</div> <!-- col-md-9 -->
+
+	
+		<div class="col-md-3">
+	<div id="sidebar">
+	
+			
+  <div id="site_search">
+   <div class="form-group">
+    <input type="text" id="local-search-input" name="q" results="0" placeholder="Search" class="st-search-input st-default-search-input form-control"/>
+   </div>  
+  <div id="local-search-result"></div>
+  </div>
+
+
+		
+			
+		
+			
+	<div class="widget">
+		<h4>Tag Cloud</h4>
+		<ul class="tag_box inline list-unstyled">		
+		
+			<li><a href="/tags/Spark/">Spark<span>4</span></a></li>
+		
+			<li><a href="/tags/Scala/">Scala<span>3</span></a></li>
+		
+			<li><a href="/tags/竞赛/">竞赛<span>3</span></a></li>
+		
+			<li><a href="/tags/tensorflow/">tensorflow<span>2</span></a></li>
+		
+			<li><a href="/tags/Python/">Python<span>1</span></a></li>
+		
+			<li><a href="/tags/Spark-DataFrame/">Spark DataFrame<span>1</span></a></li>
+		
+			<li><a href="/tags/VIM/">VIM<span>1</span></a></li>
+		
+			<li><a href="/tags/基础/">基础<span>1</span></a></li>
+		
+			<li><a href="/tags/Spark-Streaming/">Spark Streaming<span>1</span></a></li>
+		
+			<li><a href="/tags/Flink/">Flink<span>1</span></a></li>
+		
+			<li><a href="/tags/Spark-Scala-Streaming/">Spark Scala Streaming<span>1</span></a></li>
+		
+		 
+		</ul>
+	</div>
+
+
+		
+			
+<div class="widget">
+  <h4>Recent Posts</h4>
+  <ul class="entry list-unstyled">
+    
+      <li>
+        <a href="/2017/01/07/LearningFlink/" ><i class="fa fa-file-o"></i>LearningFlink</a>
+      </li>
+    
+      <li>
+        <a href="/2017/01/04/Deep-MNIST-for-Experts/" ><i class="fa fa-file-o"></i>Deep MNIST for Experts</a>
+      </li>
+    
+      <li>
+        <a href="/2017/01/04/Google-面试宝典/" ><i class="fa fa-file-o"></i>Google 面试宝典</a>
+      </li>
+    
+      <li>
+        <a href="/2016/12/28/install-tensorflow/" ><i class="fa fa-file-o"></i>install tensorflow</a>
+      </li>
+    
+      <li>
+        <a href="/2016/12/22/vim使用技巧/" ><i class="fa fa-file-o"></i>vim使用技巧</a>
+      </li>
+    
+  </ul>
+</div>
+
+		
+			
+<div class="widget">
+	<h4>Contact</h4>
+	<ul class="blogroll list-unstyled">
+	
+		<li><i class="fa fa-github"></i><a href="http://www.github.com/zhangshengshan" title="My Github account." target="_blank"]);">Github</a></li>
+	
+		<li><i class="fa fa-envelope-o"></i><a href="mailto:zsszss0000@163.com" title="My Email account." target="_blank"]);">Email</a></li>
+	
+	</ul>
+</div>
+
+
+		
+	</div> <!-- sidebar -->
+</div> <!-- col-md-3 -->
+
+	
+	
+</div> <!-- row-fluid -->
+
+	</div>
+  </div>
+  <div class="container-narrow">
+  <footer> <p>
+  &copy; 2017 Zhang ShengShan
+  
+      with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
+</p> </footer>
+</div> <!-- container-narrow -->
+  
+
+
+  
+<a id="gotop" href="#">   
+  <span>▲</span> 
+</a>
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/search.js"></script> 
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+   <script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {
+	 	search_path = "search.xml";
+	 }
+	 var path = "/" + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+   </script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
+
+</body>
+   </html>
