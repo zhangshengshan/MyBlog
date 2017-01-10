@@ -385,8 +385,11 @@ DataFrames facilitate practical ML Pipelines, particularly feature transformatio
 <li><a href="https://github.com/ogrisel/parallel_ml_tutorial" target="_blank" rel="external">《Parallel Machine Learning with scikit-learn and IPython》</a></li>
 <li><a href="http://www.ssc.upenn.edu/~fdiebold/Teaching706/econ706Penn.html" target="_blank" rel="external">《Time Series Econometrics - A Concise Course》</a></li>
 <li><a href="http://fotiad.is/blog/sentiment-analysis-comparison/" target="_blank" rel="external">《A comparison of open source tools for sentiment analysis》</a></li>
-<li><a href="">《International Joint Conference on Artificial Intelligence Accepted paper》</a></li>
+<li><a href="http://ijcai-15.org/index.php/accepted-papers" target="_blank" rel="external">《International Joint Conference on Artificial Intelligence Accepted paper》</a></li>
 <li><a href="">《How to Evaluate Machine Learning Models, Part 1: Orientation》 How to Evaluate Machine Learning Models, Part 2a: Classification Metrics,How to Evaluate Machine Learning Models, Part 2b: Ranking and Regression Metrics.</a></li>
+<li><a href="http://blog.dato.com/how-to-evaluate-machine-learning-models-part-1-orientation" target="_blank" rel="external">《How to Evaluate Machine Learning Models, Part 1: Orientation》</a></li>
+<li><a href="">《Part 2a: Classification Metrics》</a></li>
+<li><a href="">《Part 2b: Ranking and Regression Metric》</a></li>
 <li><a href="">《Learning scikit-learn: Machine Learning in Python》</a></li>
 <li><a href="">《Lightning fast Machine Learning with Spark》</a></li>
 <li><a href="">《How we’re using machine learning to fight shell selling》</a></li>
